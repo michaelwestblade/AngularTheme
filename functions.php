@@ -9,6 +9,7 @@
 function angularTheme_enqueue_scripts(){
     //register angular js
     wp_register_script('angular-core',get_bloginfo('template_directory').'/scripts/angular/angular.js');
+    wp_register_script('angular-route',get_bloginfo('template_directory').'/scripts/angular/angular-route.js');
 
     // register angular bootstrap
     wp_register_script('angular-bootstrap',get_bloginfo('template_directory').'/scripts/ui-bootstrap-tpls-0.11.2.js');
@@ -19,11 +20,16 @@ function angularTheme_enqueue_scripts(){
     // register our angular app
     wp_register_script('angular-app',get_bloginfo('template_directory').'/js/app.js');
 
+    // register our controllers
+    wp_register_script('postsController',get_bloginfo('template_directory').'/js/controllers/PostsController.js');
+
     // enqueue all scripts
     wp_enqueue_script('angular-core');
+    wp_enqueue_script('angular-route');
     wp_enqueue_script('angular-bootstrap');
     wp_enqueue_script('angular-ui-router');
     wp_enqueue_script('angular-app');
+    wp_enqueue_script('postsController');
 
     // we need to create a JavaScript variable to store our API endpoint...
     wp_localize_script( 'angular-core', 'AppAPI', array( 'url' => get_bloginfo('wpurl').'/wp-json/') ); // this is the API address of the JSON API plugin

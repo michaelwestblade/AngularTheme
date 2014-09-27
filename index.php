@@ -1,12 +1,10 @@
 <?php get_header(); ?>
 
-<div ng-controller="mycontroller">
+<div>
     <!-- display all post titles in a list -->
-    <ul>
-        <li ng-repeat="post in postdata">
-            {{post.title}}
-        </li>
-    </ul>
+    <div ui-view>
+        <a href="" ui-sref="posts()">Posts</a>
+    </div>
 </div>
 
 <?php get_footer(); ?>
