@@ -34,5 +34,15 @@ config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouter
         url:"/posts",
         templateUrl:BlogInfo.url+'partials/posts.html',
         controller:'PostsController'
+    }).
+    state("post",{
+       url:"/posts/post/{postId}",
+       templateUrl:BlogInfo.url+'partials/post.html',
+       controller:'PostController',
+       resolve : {
+           post : function($stateParams,PostsService){
+               return PostsService.post($stateParams.postId);
+           }
+       }
     });
 }]);

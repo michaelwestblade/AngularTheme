@@ -1,7 +1,26 @@
-<ul>
-    <li ng-repeat="post in posts[currentPage-1].posts">{{post.title}}</li>
-</ul>
+<div class="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="post in posts[currentPage-1].posts">
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
+                            </h4>
+                            <span ng-bind-html="post.excerpt | unsafe"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-<ul class="pagination">
-    <li ng-repeat="page in posts"><a href="" ng-click="getPosts(page)">{{page.page}}</a></li>
-</ul>
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="pagination">
+                <li ng-repeat="page in posts"><a href="" ng-click="getPosts(page)">{{page.page}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

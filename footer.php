@@ -1,10 +1,14 @@
 <?php wp_footer(); ?>
 
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+<div class="footer">
     <div class="container">
-       Footer
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                Footer
+            </div>
+        </nav>
     </div>
-</nav>
+</div>
 
 </body>
 </html>

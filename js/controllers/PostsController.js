@@ -11,12 +11,13 @@ myapp.controller('PostsController', ['$scope','PostsService',function($scope,Pos
             var last = 5;
             var first = 1;
 
+            // push first page, set counts
             $scope.posts.push({'page':1,'posts':posts.data,'first':first,'last':last});
             $scope.totalPages = posts.headers('X-WP-TotalPages');
             $scope.postCount = posts.headers('X-WP-Total');
             $scope.currentPage = 1;
 
-            // build pages
+            // build the rest of the pages
             for(var i=1; i<$scope.totalPages; i++)
             {
                 first+=5;
@@ -33,17 +34,24 @@ myapp.controller('PostsController', ['$scope','PostsService',function($scope,Pos
         }
     );
 
+    // function to get more posts or pull from cache
     $scope.getPosts = function(page){
-        // load posts from the wordpress api
-        PostsService.posts(5,page.first-1)
-            .then(function(posts){
-                $scope.currentPage = page.page;
-                page.posts = posts.data;
-                $scope.totalPages = posts.headers('X-WP-TotalPages');
-                $scope.postCount = posts.headers('X-WP-Total');
-            },function(result){
-                console.log(result);
-            }
-        );
+        // check cache
+        if(page.posts.length!=0){
+            $scope.currentPage = page.page;
+        }
+        // load them
+        else{
+            PostsService.posts(5,page.first-1)
+                .then(function(posts){
+                    $scope.currentPage = page.page;
+                    page.posts = posts.data;
+                    $scope.totalPages = posts.headers('X-WP-TotalPages');
+                    $scope.postCount = posts.headers('X-WP-Total');
+                },function(result){
+                    console.log(result);
+                }
+            );
+        }
     }
 }]);

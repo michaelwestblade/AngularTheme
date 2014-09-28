@@ -11,6 +11,15 @@ myapp.factory('PostsService', ['ajax','$q',function(ajax,$q){
             });
 
             return deferred.promise;
+        },
+        post : function(postId){
+            var deferred = $q.defer();
+
+            ajax.call('posts/'+postId,null,'GET',function(data){
+                deferred.resolve(data.data);
+            });
+
+            return deferred.promise;
         }
     }
 }]);
