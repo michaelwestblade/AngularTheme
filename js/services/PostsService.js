@@ -3,10 +3,10 @@
  */
 myapp.factory('PostsService', ['ajax','$q',function(ajax,$q){
     return {
-        posts : function(count,offset){
+        posts : function(posts,page){
             var deferred = $q.defer();
 
-            ajax.call('posts?filter[posts_per_page]='+count+'&filter[offset]='+offset,null,'GET',function(data){
+            ajax.call('posts?page='+page+'&filter[posts_per_page]='+posts,null,'GET',function(data){
                 deferred.resolve(data);
             });
 

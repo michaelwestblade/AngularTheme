@@ -6,7 +6,7 @@ myapp.controller('PostsController', ['$scope','PostsService',function($scope,Pos
     $scope.posts = [];
 
     // load posts from the wordpress api
-    PostsService.posts(5,0)
+    PostsService.posts(5,1)
         .then(function(posts){
             var last = 5;
             var first = 1;
@@ -42,7 +42,7 @@ myapp.controller('PostsController', ['$scope','PostsService',function($scope,Pos
         }
         // load them
         else{
-            PostsService.posts(5,page.first-1)
+            PostsService.posts(5,page.page)
                 .then(function(posts){
                     $scope.currentPage = page.page;
                     page.posts = posts.data;

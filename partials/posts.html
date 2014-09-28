@@ -1,7 +1,7 @@
-<div class="content">
+<div class="content" id="postList">
     <div class="row">
         <div class="col-sm-12">
-            <ul class="list-group">
+            <ul class="list-group posts">
                 <li class="list-group-item" ng-repeat="post in posts[currentPage-1].posts">
                     <div class="media">
                         <div class="media-body">
@@ -19,7 +19,9 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="pagination">
-                <li ng-repeat="page in posts"><a href="" ng-click="getPosts(page)">{{page.page}}</a></li>
+                <li ng-repeat="page in posts" ng-class="{active:currentPage==page.page}">
+                    <a href="" ng-click="getPosts(page)">{{page.page}}</a>
+                </li>
             </ul>
         </div>
     </div>

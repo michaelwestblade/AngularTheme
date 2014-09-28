@@ -1,2 +1,7 @@
-body{padding-bottom:60px;}
-#main{min-height:400px;}
+body {
+  padding-bottom: 60px;
+  min-height: 400px; }
+  body #main #postList ul.posts li {
+    margin: 10px 0; }
+
+/*# sourceMappingURL=main.css.map */
