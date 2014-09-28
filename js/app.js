@@ -2,13 +2,14 @@
  * Created by Michael Westblade on 9/27/14.
  */
 // initialize the app
-var myapp = angular.module('myapp',['ngRoute','ui.router']);
+var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap']);
 
 myapp.run(['$rootScope', '$state', '$stateParams',function($rootScope, $state, $stateParams){
     // the following data is fetched from the JavaScript variables created by wp_localize_script(), and stored in the Angular rootScope
     $rootScope.dir = BlogInfo.url;
     $rootScope.site = BlogInfo.site;
     $rootScope.api = AppAPI.url;
+    $rootScope.nonce = WP_API_Settings.nonce;
 
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
