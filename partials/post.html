@@ -5,3 +5,28 @@
 <div class="well">
     <div class="post" ng-bind-html="post.content | unsafe"></div>
 </div>
+
+<div class="comments" ng-show="!showCommentForm">
+    <h3>Comments</h3>
+    <button class="btn btn-primary" ng-click="toggleCommentForm()">Add Comment</button>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="comment in comments">
+            <div class="media">
+                <a class="pull-left" href="">
+                    <img class="media-object" src="{{comment.author.avatar}}" alt=""/>
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">{{comment.author.name}}</h4>
+                    <span ng-bind-html="comment.content | unsafe"></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<form class="form-horizontal" action="" ng-submit="addComment(jsComment)" ng-show="showCommentForm">
+    <div class="form-group">
+        <textarea name="content" ng-model="jsComment.content" id="" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

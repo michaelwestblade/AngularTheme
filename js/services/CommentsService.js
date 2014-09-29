@@ -7,7 +7,7 @@ myapp.factory('CommentsService', ['ajax','$q',function(ajax,$q){
             var deferred = $q.defer();
 
             ajax.call('posts/'+postId+'/comments',comment,'POST',function(data){
-                deferred.resolve(data);
+                deferred.resolve(data.data);
             });
 
             return deferred.promise;
@@ -16,7 +16,7 @@ myapp.factory('CommentsService', ['ajax','$q',function(ajax,$q){
             var deferred = $q.defer();
 
             ajax.call('posts/'+postId+'/comments',null,'GET',function(data){
-                deferred.resolve(data);
+                deferred.resolve(data.data);
             });
 
             return deferred.promise;

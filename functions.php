@@ -19,7 +19,7 @@ function angularTheme_enqueue_scripts(){
     // we need to create a JavaScript variable to store our API endpoint...
     wp_localize_script( 'angular-core', 'AppAPI', array( 'url' => get_bloginfo('wpurl').'/wp-json/') ); // this is the API address of the JSON API plugin
     // ... and useful information such as the theme directory and website url
-    wp_localize_script( 'angular-core', 'BlogInfo', array( 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl')) );
+    wp_localize_script( 'angular-core', 'BlogInfo', array( 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'user' => wp_get_current_user()) );
 
     angularTheme_load_controllers();
     angularTheme_load_services();

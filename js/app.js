@@ -11,6 +11,8 @@ myapp.run(['$rootScope', '$state', '$stateParams',function($rootScope, $state, $
     $rootScope.api = AppAPI.url;
     $rootScope.nonce = WP_API_Settings.nonce;
 
+    $rootScope.user = BlogInfo.user;
+
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
 
