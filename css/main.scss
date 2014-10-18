@@ -1,4 +1,9 @@
+/* bootstrap overrides */
+ul.list-group{margin-bottom: 0;}
+
 body{padding-bottom:60px;min-height:400px;
+  #header{  }
+
   #main{
     #postList{
       ul.posts{

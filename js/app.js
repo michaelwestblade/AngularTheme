@@ -4,7 +4,7 @@
 // initialize the app
 var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap']);
 
-myapp.run(['$rootScope', '$state', '$stateParams',function($rootScope, $state, $stateParams){
+myapp.run(['$rootScope', '$state', '$stateParams','UsersService',function($rootScope, $state, $stateParams,UsersService){
     // the following data is fetched from the JavaScript variables created by wp_localize_script(), and stored in the Angular rootScope
     $rootScope.dir = BlogInfo.url;
     $rootScope.site = BlogInfo.site;
@@ -22,6 +22,19 @@ myapp.run(['$rootScope', '$state', '$stateParams',function($rootScope, $state, $
            console.log(event);
         }
     );
+
+    // check if user is signed in
+    if($rootScope.user){
+        $rootScope.avatarLoading  = 'loading';
+        UsersService.user($rootScope.user.ID)
+        .then(function(data){
+            $rootScope.user.data.avatar = data.avatar;
+            $rootScope.avatarLoading  = 'loaded';
+        },function(errors){
+            console.log(errors);
+            $rootScope.avatarLoading  = 'loaded';
+        });
+    }
 }]).
 config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise('/');

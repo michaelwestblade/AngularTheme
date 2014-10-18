@@ -3,7 +3,7 @@
         <title>My Angular Theme</title>
         <?php wp_head(); ?>
 
-        <nav class="navbar navbar-default" role="navigation">
+        <nav id="header" class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="" ui-sref="home()">My Angular Theme</a>
@@ -15,8 +15,24 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="pull-right" ng-if="!user.data"><a href="wp-login.php?action=register">Register</a></li>
-                        <li class="pull-right" ng-if="user.data"><h3>Welcome, {{user.data.display_name}}</h3></li>
+                        <li ng-if="user.data">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="row-picture">
+                                        <img ng-src="{{user.data.avatar}}" class="circle" alt="icon"/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li ng-if="user.data">
+                            <a href="wp-login.php?action=logout">Sign Out</a>
+                        </li>
+                        <li ng-if="!user.data">
+                            <a href="wp-login.php?action=register">Sign Up</a>
+                        </li>
+                        <li ng-if="!user.data">
+                            <a href="wp-login.php">Sign In</a>
+                        </li>
                     </ul>
                 </div>
             </div>

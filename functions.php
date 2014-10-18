@@ -77,6 +77,9 @@ function angularTheme_load_services(){
 
     wp_register_script('commentsService',get_bloginfo('template_directory').'/js/services/CommentsService.js');
     wp_enqueue_script('commentsService');
+
+    wp_register_script('usersService',get_bloginfo('template_directory').'/js/services/UsersService.js');
+    wp_enqueue_script('usersService');
 }
 
 function angularTheme_load_directives(){
