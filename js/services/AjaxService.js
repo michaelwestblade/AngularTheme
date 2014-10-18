@@ -19,7 +19,7 @@ myapp.factory('ajax', ['$rootScope','$http',function($rootScope,$http){
             var caching = (cache ? cache : false);
 
             return $http({
-                url:$rootScope.api+url,
+                url:url,
                 params:getParams,
                 data:postParams,
                 method:ajaxMethod,

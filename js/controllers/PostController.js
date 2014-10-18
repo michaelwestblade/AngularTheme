@@ -5,9 +5,9 @@
 myapp.controller('PostController', ['$scope','post','CommentsService',function($scope,post,CommentsService){
     $scope.post = post;
     $scope.jsComment = {
-        'user_id':$scope.user.data.ID,
-        'author':$scope.user.data['display_name'],
-        'author_email':$scope.user.data['user_email'],
+        'user_id':($scope.user.data ? $scope.user.data.ID : null),
+        'author':($scope.user.data ? $scope.user.data['display_name'] : null),
+        'author_email':($scope.user.data ? $scope.user.data['user_email'] : null),
         'content':''
     };
     $scope.showCommentForm = false;

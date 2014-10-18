@@ -1,12 +1,12 @@
 /**
  * Created by Michael Westblade on 9/27/14.
  */
-myapp.factory('CommentsService', ['ajax','$q',function(ajax,$q){
+myapp.factory('CommentsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootScope){
     return {
         addComment : function(postId,comment){
             var deferred = $q.defer();
 
-            ajax.call('posts/'+postId+'/comments',comment,'POST',function(data){
+            ajax.call($rootScope.api+'posts/'+postId+'/comments',comment,'POST',function(data){
                 deferred.resolve(data.data);
             });
 
@@ -15,7 +15,7 @@ myapp.factory('CommentsService', ['ajax','$q',function(ajax,$q){
         getComments : function(postId){
             var deferred = $q.defer();
 
-            ajax.call('posts/'+postId+'/comments',null,'GET',function(data){
+            ajax.call($rootScope.api+'posts/'+postId+'/comments',null,'GET',function(data){
                 deferred.resolve(data.data);
             });
 

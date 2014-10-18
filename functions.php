@@ -44,6 +44,7 @@ function angularTheme_load_stylesheets(){
     wp_enqueue_style('main', get_bloginfo('template_directory').'/css/main.css');
 
     wp_enqueue_style('bootstrap', get_bloginfo('template_directory').'/style/bootstrap/bootstrap.css');
+    wp_enqueue_style('material', get_bloginfo('template_directory').'/style/material/css/material-wfont.min.css');
 }
 
 function angularTheme_load_dependencies(){
@@ -83,5 +84,3 @@ function angularTheme_load_directives(){
     wp_register_script('html',get_bloginfo('template_directory').'/js/directives/html.js');
     wp_enqueue_script('html');
 }
-
-add_action('wp_enqueue_scripts', 'angularTheme_enqueue_scripts');

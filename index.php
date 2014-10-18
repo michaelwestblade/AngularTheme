@@ -1,3 +1,4 @@
+<?php add_action('wp_enqueue_scripts', 'angularTheme_enqueue_scripts'); ?>
 <?php get_header(); ?>
 
 <div class="container">

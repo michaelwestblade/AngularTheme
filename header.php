@@ -13,6 +13,11 @@
                     <ul class="nav navbar-nav">
                         <li ng-class="{active:$state.includes('home')}"><a href="" ui-sref="home()">Posts</a></li>
                     </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="pull-right" ng-if="!user.data"><a href="wp-login.php?action=register">Register</a></li>
+                        <li class="pull-right" ng-if="user.data"><h3>Welcome, {{user.data.display_name}}</h3></li>
+                    </ul>
                 </div>
             </div>
 
