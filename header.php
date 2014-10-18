@@ -16,10 +16,13 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li ng-if="user.data">
-                            <ul class="list-group">
+                            <ul class="list-group avatar">
                                 <li class="list-group-item">
                                     <div class="row-picture">
                                         <img ng-src="{{user.data.avatar}}" class="circle" alt="icon"/>
+                                    </div>
+                                    <div class="row-content">
+                                        <h4>You are signed in as {{user.data['display_name']}}</h4>
                                     </div>
                                 </li>
                             </ul>

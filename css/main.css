@@ -5,6 +5,13 @@ ul.list-group {
 body {
   padding-bottom: 60px;
   min-height: 400px; }
+  body #header ul.list-group.avatar li {
+    padding: 5px; }
+    body #header ul.list-group.avatar li div.row-picture {
+      padding: 0; }
+    body #header ul.list-group.avatar li div.row-content {
+      color: #FFF;
+      padding-left: 5px; }
   body #main #postList ul.posts li {
     margin: 10px 0; }
 
