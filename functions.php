@@ -6,6 +6,8 @@
  * Time: 2:06 PM
  */
 
+require_once 'InstagramPHP/Instagram.php';
+
 function angularTheme_enqueue_scripts(){
     angularTheme_load_stylesheets();
 
@@ -19,7 +21,7 @@ function angularTheme_enqueue_scripts(){
     // we need to create a JavaScript variable to store our API endpoint...
     wp_localize_script( 'angular-core', 'AppAPI', array( 'url' => get_bloginfo('wpurl').'/wp-json/') ); // this is the API address of the JSON API plugin
     // ... and useful information such as the theme directory and website url
-    wp_localize_script( 'angular-core', 'BlogInfo', array( 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'user' => wp_get_current_user()) );
+    wp_localize_script( 'angular-core', 'BlogInfo', array( 'name' => get_bloginfo('name'), 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'user' => wp_get_current_user()) );
 
     angularTheme_load_controllers();
     angularTheme_load_services();
@@ -80,10 +82,33 @@ function angularTheme_load_services(){
 
     wp_register_script('usersService',get_bloginfo('template_directory').'/js/services/UsersService.js');
     wp_enqueue_script('usersService');
+
+    wp_register_script('instagramService',get_bloginfo('template_directory').'/js/services/InstagramService.js');
+    wp_enqueue_script('instagramService');
 }
 
 function angularTheme_load_directives(){
     // register our directives
     wp_register_script('html',get_bloginfo('template_directory').'/js/directives/html.js');
     wp_enqueue_script('html');
+}
+
+function getInstagramPhotos(){
+
+    $config = array(
+        'site_url' => 'https://api.instagram.com/oauth/access_token',
+        'client_id'      => '95c1f3da8b3246e68b3532210d811f7f',
+        'client_secret'   => 'edc64ddd6d6e487cabd305204238eca2',
+        'grant_type' => 'authorization_code',
+        'redirect_uri' => 'http:/localhost'
+    );
+    // Initialize class
+    $instagram = new Instagram($config);
+
+    // Instantiate the API handler object
+    $instagram = new Instagram($config);
+    $popular = $instagram->getPopularMedia();
+
+    $response = json_decode($popular, true);
+    var_dump($response);
 }

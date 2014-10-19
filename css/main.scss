@@ -1,8 +1,10 @@
 /* bootstrap overrides */
 ul.list-group{margin-bottom: 0;}
 
-body{padding-bottom:60px;min-height:400px;
-  #header{
+body{padding-bottom:60px;background: #FFF;
+  #siteContainer{max-width: 1200px; margin: 0 auto;background: #FFF;min-height:400px;}
+
+  #header{margin-top: 10px;
     ul.list-group{
       &.avatar{
         li{padding:5px;
@@ -13,7 +15,7 @@ body{padding-bottom:60px;min-height:400px;
     }
   }
 
-  #main{
+  #main{min-height: 400px;padding: 20px;
     #postList{
       ul.posts{
         li{margin: 10px 0;}

@@ -2,11 +2,13 @@
     <head>
         <title>My Angular Theme</title>
         <?php wp_head(); ?>
-
+    </head>
+    <?php getInstagramPhotos(); ?>
+    <div id="siteContainer">
         <nav id="header" class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="" ui-sref="home()">My Angular Theme</a>
+                    <a class="navbar-brand" href="" ui-sref="home()">{{siteTitle}}</a>
                 </div>
 
                 <div class="collapse navbar-collapse">
@@ -41,6 +43,4 @@
             </div>
 
         </nav>
-
-    </head>
     <body>

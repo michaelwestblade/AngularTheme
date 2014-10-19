@@ -4,15 +4,25 @@ ul.list-group {
 
 body {
   padding-bottom: 60px;
-  min-height: 400px; }
-  body #header ul.list-group.avatar li {
-    padding: 5px; }
-    body #header ul.list-group.avatar li div.row-picture {
-      padding: 0; }
-    body #header ul.list-group.avatar li div.row-content {
-      color: #FFF;
-      padding-left: 5px; }
-  body #main #postList ul.posts li {
-    margin: 10px 0; }
+  background: #FFF; }
+  body #siteContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #FFF;
+    min-height: 400px; }
+  body #header {
+    margin-top: 10px; }
+    body #header ul.list-group.avatar li {
+      padding: 5px; }
+      body #header ul.list-group.avatar li div.row-picture {
+        padding: 0; }
+      body #header ul.list-group.avatar li div.row-content {
+        color: #FFF;
+        padding-left: 5px; }
+  body #main {
+    min-height: 400px;
+    padding: 20px; }
+    body #main #postList ul.posts li {
+      margin: 10px 0; }
 
 /*# sourceMappingURL=main.css.map */
