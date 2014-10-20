@@ -4,13 +4,21 @@ ul.list-group{margin-bottom: 0;}
 body{padding-bottom:60px;background: #FFF;
   #siteContainer{max-width: 1200px; margin: 0 auto;background: #FFF;min-height:400px;}
 
-  #header{margin-top: 10px;
+  #header{margin-top: 10px;margin-bottom: 0;
     ul.list-group{
       &.avatar{
         li{padding:5px;
           div.row-picture{padding: 0;}
           div.row-content{color: #FFF;padding-left: 5px;}
         }
+      }
+    }
+  }
+
+  #instagramHeader{
+    div.row{
+      .imageDiv{padding: 0;
+        img{width: 100%;}
       }
     }
   }

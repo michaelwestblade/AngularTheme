@@ -42,10 +42,10 @@
             </div>
         </nav>
 
-	    <div class="container-fluid">
+	    <div id="instagramHeader" class="container-fluid">
 		    <div class="row">
-			    <div class="col-lg-2" ng-repeat="image in instagram | limitTo:6">
-				    <img width="100%;" ng-src="{{image.images['standard_resolution'].url}}" alt=""/>
+			    <div class="col-lg-2 imageDiv" ng-repeat="image in instagram | limitTo:6">
+				    <img ng-src="{{image.images['standard_resolution'].url}}" alt=""/>
 			    </div>
 		    </div>
 	    </div>
