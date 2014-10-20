@@ -40,8 +40,13 @@
                     </ul>
                 </div>
             </div>
-
         </nav>
 
-	    <img ng-src="{{image.images.thumbnail.url}}" ng-repeat="image in instagram | limitTo:8" alt=""/>
+	    <div class="container-fluid">
+		    <div class="row">
+			    <div class="col-lg-2" ng-repeat="image in instagram | limitTo:6">
+				    <img width="100%;" ng-src="{{image.images['standard_resolution'].url}}" alt=""/>
+			    </div>
+		    </div>
+	    </div>
     <body>
