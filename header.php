@@ -3,7 +3,6 @@
         <title>My Angular Theme</title>
         <?php wp_head(); ?>
     </head>
-    <?php getInstagramPhotos(); ?>
     <div id="siteContainer">
         <nav id="header" class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
@@ -43,4 +42,6 @@
             </div>
 
         </nav>
+
+	    <img ng-src="{{image.images.thumbnail.url}}" ng-repeat="image in instagram | limitTo:8" alt=""/>
     <body>

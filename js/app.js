@@ -12,7 +12,8 @@ myapp.run(['$rootScope', '$state', '$stateParams','UsersService','InstagramServi
     $rootScope.nonce = WP_API_Settings.nonce;
     $rootScope.siteTitle = BlogInfo.name;
     $rootScope.user = BlogInfo.user;
-    $rootScope.InstagramToken = '95c1f3da8b3246e68b3532210d811f7f';
+    $rootScope.adminAjax = BlogInfo.adminAjax;
+    $rootScope.instagram = [];
 
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
@@ -26,7 +27,8 @@ myapp.run(['$rootScope', '$state', '$stateParams','UsersService','InstagramServi
 
     InstagramService.getMostRecent()
         .then(function(data){
-           console.log(data)
+           console.log(data);
+            $rootScope.instagram = data;
         },function(errors){
             console.log(errors);
         });

@@ -21,7 +21,7 @@ function angularTheme_enqueue_scripts(){
     // we need to create a JavaScript variable to store our API endpoint...
     wp_localize_script( 'angular-core', 'AppAPI', array( 'url' => get_bloginfo('wpurl').'/wp-json/') ); // this is the API address of the JSON API plugin
     // ... and useful information such as the theme directory and website url
-    wp_localize_script( 'angular-core', 'BlogInfo', array( 'name' => get_bloginfo('name'), 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'user' => wp_get_current_user()) );
+    wp_localize_script( 'angular-core', 'BlogInfo', array( 'adminAjax'=>admin_url('admin-ajax.php'),'name' => get_bloginfo('name'), 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'user' => wp_get_current_user()) );
 
     angularTheme_load_controllers();
     angularTheme_load_services();
@@ -94,21 +94,20 @@ function angularTheme_load_directives(){
 }
 
 function getInstagramPhotos(){
+    $url = 'https://api.instagram.com/v1/users/201994052/media/recent/?client_id=95c1f3da8b3246e68b3532210d811f7f';
 
-    $config = array(
-        'site_url' => 'https://api.instagram.com/oauth/access_token',
-        'client_id'      => '95c1f3da8b3246e68b3532210d811f7f',
-        'client_secret'   => 'edc64ddd6d6e487cabd305204238eca2',
-        'grant_type' => 'authorization_code',
-        'redirect_uri' => 'http:/localhost'
-    );
-    // Initialize class
-    $instagram = new Instagram($config);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)");
+    $feed = json_decode(curl_exec($ch));
+    curl_close($ch);
 
-    // Instantiate the API handler object
-    $instagram = new Instagram($config);
-    $popular = $instagram->getPopularMedia();
-
-    $response = json_decode($popular, true);
-    var_dump($response);
+    $result = json_encode($feed);
+	echo $result;
+	die();
 }
+
+add_action( 'wp_ajax_nopriv_getInstagramPhotos', 'getInstagramPhotos' );
