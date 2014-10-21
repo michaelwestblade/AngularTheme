@@ -1,0 +1,29 @@
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <ul class="list-group avatar">
+            <li class="list-group-item">
+                <div class="row-picture" dropdown>
+                    <div ng-if="user.data" class="dropdown-toggle">
+                        <img ng-show="avatarLoading==='loaded'" ng-src="{{user.data.avatar}}" class="circle" alt="icon"/>
+                        <div ng-show="avatarLoading==='loading'" class="loader spinner"></div>
+                    </div>
+                    <div ng-if="!user.data" class="dropdown-toggle">
+                        <i class="mdi-social-person"></i>
+                    </div>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-if="user.data">
+                            <a href="wp-login.php?action=logout">Sign Out</a>
+                        </li>
+                        <li ng-if="!user.data">
+                            <a href="wp-login.php?action=register">Sign Up</a>
+                        </li>
+                        <li ng-if="!user.data">
+                            <a href="wp-login.php">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>

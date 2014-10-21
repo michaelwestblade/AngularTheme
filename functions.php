@@ -111,3 +111,4 @@ function getInstagramPhotos(){
 }
 
 add_action( 'wp_ajax_nopriv_getInstagramPhotos', 'getInstagramPhotos' );
+add_action( 'wp_ajax_getInstagramPhotos', 'getInstagramPhotos' );
