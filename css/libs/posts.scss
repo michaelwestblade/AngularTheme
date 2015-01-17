@@ -1,6 +1,7 @@
 #postList{
   ul.posts{
     li{margin: 20px 0;
+      &.last{margin-bottom: 50px; padding-bottom:10px;  border-bottom: 1px solid #000;}
       div.media{
         a.media-left{
           img{width: 100px;}

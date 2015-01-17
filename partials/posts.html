@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="list-group posts">
-                <li class="list-group-item" ng-repeat="post in posts">
+                <li class="list-group-item" ng-repeat="post in posts" ng-class="{last:$index==posts.length-1}">
                     <div class="media" ng-if="$index!==posts.length-1">
                         <a class="media-left pull-left" href="#">
                             <img ng-src="{{ (post.featured_image ? post.featured_image.guid : BlogInfo.url+'/img/default.jpg') }}" alt=""/> </a>

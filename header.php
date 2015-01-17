@@ -21,4 +21,4 @@
             </div>
         </nav>
         <div ng-include="dir+'partials/instagram-header.html'"></div>
-    <body>
+        <body>

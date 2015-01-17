@@ -2,6 +2,26 @@
 ul.list-group {
   margin-bottom: 0; }
 
+#header {
+  margin-top: 10px;
+  margin-bottom: 0;
+  background-color: #a50000; }
+  #header ul.list-group.avatar li {
+    padding: 5px;
+    overflow: visible; }
+    #header ul.list-group.avatar li div.row-picture {
+      padding: 0; }
+      #header ul.list-group.avatar li div.row-picture ul.dropdown-menu {
+        top: auto; }
+    #header ul.list-group.avatar li div.row-content {
+      color: #FFF;
+      padding-left: 5px; }
+
+#instagramHeader div.row .imageDiv {
+  padding: 0; }
+  #instagramHeader div.row .imageDiv img {
+    width: 100%; }
+
 body {
   padding-bottom: 60px;
   background: #000; }
@@ -10,37 +30,25 @@ body {
     margin: 0 auto;
     background: #FFF;
     min-height: 400px; }
-  body #header {
-    margin-top: 10px;
-    margin-bottom: 0; }
-    body #header ul.list-group.avatar li {
-      padding: 5px;
-      overflow: visible; }
-      body #header ul.list-group.avatar li div.row-picture {
-        padding: 0; }
-        body #header ul.list-group.avatar li div.row-picture ul.dropdown-menu {
-          top: auto; }
-      body #header ul.list-group.avatar li div.row-content {
-        color: #FFF;
-        padding-left: 5px; }
-  body #instagramHeader div.row .imageDiv {
-    padding: 0; }
-    body #instagramHeader div.row .imageDiv img {
-      width: 100%; }
-  body #main {
-    min-height: 400px;
-    padding: 20px; }
-    body #main #postList ul.posts li {
-      margin: 20px 0; }
-      body #main #postList ul.posts li div.media a.media-left img {
-        width: 100px; }
-  body .loader.spinner {
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    border-radius: 100%;
-    -webkit-animation: scaleout 1.0s infinite ease-in-out;
-    animation: scaleout 1.0s infinite ease-in-out; }
+    body #siteContainer #main {
+      min-height: 400px;
+      padding: 20px; }
+      body #siteContainer #main #postList ul.posts li {
+        margin: 20px 0; }
+        body #siteContainer #main #postList ul.posts li.last {
+          margin-bottom: 50px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #000; }
+        body #siteContainer #main #postList ul.posts li div.media a.media-left img {
+          width: 100px; }
+
+.loader.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out; }
 @-webkit-keyframes scaleout {
   0% {
     -webkit-transform: scale(0); }
