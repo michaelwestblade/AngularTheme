@@ -6,7 +6,8 @@
  * Time: 2:06 PM
  */
 
-require_once 'InstagramPHP/Instagram.php';
+require_once 'libs/Instagram.php';
+require_once 'libs/settingsMenu.php';
 
 function angularTheme_enqueue_scripts(){
     angularTheme_load_stylesheets();
@@ -92,23 +93,3 @@ function angularTheme_load_directives(){
     wp_register_script('html',get_bloginfo('template_directory').'/js/directives/html.js');
     wp_enqueue_script('html');
 }
-
-function getInstagramPhotos(){
-    $url = 'https://api.instagram.com/v1/users/201994052/media/recent/?client_id=95c1f3da8b3246e68b3532210d811f7f';
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)");
-    $feed = json_decode(curl_exec($ch));
-    curl_close($ch);
-
-    $result = json_encode($feed);
-	echo $result;
-	die();
-}
-
-add_action( 'wp_ajax_nopriv_getInstagramPhotos', 'getInstagramPhotos' );
-add_action( 'wp_ajax_getInstagramPhotos', 'getInstagramPhotos' );
