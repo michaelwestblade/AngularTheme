@@ -2,8 +2,23 @@
     <div class="row">
         <div class="col-sm-12">
             <ul class="list-group posts">
-                <li class="list-group-item" ng-repeat="post in posts[currentPage-1].posts">
-                    <div class="media">
+                <li class="list-group-item" ng-repeat="post in posts">
+                    <div class="media" ng-if="$index!==posts.length-1">
+                        <a class="media-left pull-left" href="#">
+                            <img ng-src="{{ (post.featured_image ? post.featured_image.guid : BlogInfo.url+'/img/default.jpg') }}" alt=""/> </a>
+
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                <a href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
+                            </h4>
+                            <span ng-bind-html="post.excerpt | unsafe"></span>
+                        </div>
+                    </div>
+
+                    <div class="media" ng-if="$index==posts.length-1" in-view="getPosts(currentPage+1)">
+                        <a class="media-left pull-left" href="#">
+                            <img ng-src="{{ (post.featuredImage ? post.featuredImage.link : BlogInfo.url+'/img/default.jpg') }}" alt=""/>
+                        </a>
                         <div class="media-body">
                             <h4 class="media-heading">
                                 <a href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
@@ -13,16 +28,14 @@
                     </div>
                 </li>
             </ul>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-sm-12">
-            <ul class="pagination">
-                <li ng-repeat="page in posts" ng-class="{active:currentPage==page.page}">
-                    <a href="" ng-click="getPosts(page)">{{page.page}}</a>
-                </li>
-            </ul>
+            <div class="pageLoading text-center" ng-show="loadingPosts">
+                <i class="fa fa-refresh fa-spin fa-5x"></i>
+            </div>
+
+            <div ng-if="endOfPosts">
+                End Of Posts
+            </div>
         </div>
     </div>
 </div>

@@ -2,7 +2,7 @@
  * Created by Michael Westblade on 9/27/14.
  */
 // initialize the app
-var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap']);
+var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview']);
 
 myapp.run(['$rootScope', '$state', '$stateParams','UsersService','InstagramService',function($rootScope, $state, $stateParams,UsersService,InstagramService){
     // the following data is fetched from the JavaScript variables created by wp_localize_script(), and stored in the Angular rootScope

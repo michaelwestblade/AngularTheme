@@ -6,7 +6,7 @@ myapp.factory('PostsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootSc
         posts : function(posts,page){
             var deferred = $q.defer();
 
-            ajax.call($rootScope.api+'posts?page='+page+'&filter[posts_per_page]='+posts,null,'GET',function(data){
+            ajax.call($rootScope.api+'posts?page='+page+'&filter[posts_per_page]='+posts+'&preview=true',null,'GET',function(data){
                 deferred.resolve(data);
             });
 

@@ -1,6 +1,7 @@
 <html <?php language_attributes(); ?> ng-app="myapp">
     <head>
         <title>My Angular Theme</title>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <?php wp_head(); ?>
     </head>
     <div id="siteContainer">

@@ -57,8 +57,12 @@ function angularTheme_load_dependencies(){
     // register angular ui router
     wp_register_script('angular-ui-router',get_bloginfo('template_directory').'/scripts/angular/angular-ui-router.js');
 
+    // register angular in-view
+    wp_register_script('angular-inview',get_bloginfo('template_directory').'/scripts/angular/angular-inview.js');
+
     wp_enqueue_script('angular-bootstrap');
     wp_enqueue_script('angular-ui-router');
+    wp_enqueue_script('angular-inview');
 }
 
 function angularTheme_load_controllers(){
@@ -93,3 +97,5 @@ function angularTheme_load_directives(){
     wp_register_script('html',get_bloginfo('template_directory').'/js/directives/html.js');
     wp_enqueue_script('html');
 }
+
+add_theme_support( 'post-thumbnails' );

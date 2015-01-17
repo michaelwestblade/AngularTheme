@@ -31,7 +31,9 @@ body {
     min-height: 400px;
     padding: 20px; }
     body #main #postList ul.posts li {
-      margin: 10px 0; }
+      margin: 20px 0; }
+      body #main #postList ul.posts li div.media a.media-left img {
+        width: 100px; }
   body .loader.spinner {
     width: 40px;
     height: 40px;
