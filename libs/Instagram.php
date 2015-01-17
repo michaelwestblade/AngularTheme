@@ -7,7 +7,8 @@
  */
 
 function getInstagramPhotos(){
-    $url = 'https://api.instagram.com/v1/users/201994052/media/recent/?client_id=95c1f3da8b3246e68b3532210d811f7f';
+    $options = get_option('plugin_options');
+    $url = "https://api.instagram.com/v1/users/{$options['instagram_account_id']}/media/recent/?client_id={$options['instagram_client_id']}";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
