@@ -622,7 +622,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421644450945</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="chnaged end of posts text">
+      <created>1421644592729</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1421644592729</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -687,7 +693,8 @@
     <MESSAGE value="working on dynamic scss" />
     <MESSAGE value="dynamic css now functional as well as comment validation" />
     <MESSAGE value="removed default copyright info" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed default copyright info" />
+    <MESSAGE value="chnaged end of posts text" />
+    <option name="LAST_COMMIT_MESSAGE" value="chnaged end of posts text" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>C:\wamp\www\wordpress</wordpressPath>
