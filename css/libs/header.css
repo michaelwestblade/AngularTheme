@@ -1,0 +1,20 @@
+#header {
+  margin-top: 10px;
+  margin-bottom: 0; }
+  #header ul.list-group.avatar li {
+    padding: 5px;
+    overflow: visible; }
+    #header ul.list-group.avatar li div.row-picture {
+      padding: 0; }
+      #header ul.list-group.avatar li div.row-picture ul.dropdown-menu {
+        top: auto; }
+    #header ul.list-group.avatar li div.row-content {
+      color: #FFF;
+      padding-left: 5px; }
+
+#instagramHeader div.row .imageDiv {
+  padding: 0; }
+  #instagramHeader div.row .imageDiv img {
+    width: 100%; }
+
+/*# sourceMappingURL=header.css.map */
