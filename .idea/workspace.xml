@@ -54,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/footer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.08585858" vertical-offset="0" max-vertical-offset="990">
-              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+              <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -604,7 +604,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421643542554</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="removed default copyright info">
+      <created>1421643898475</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1421643898475</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -668,7 +674,8 @@
     <MESSAGE value="working lazy load with animations" />
     <MESSAGE value="working on dynamic scss" />
     <MESSAGE value="dynamic css now functional as well as comment validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamic css now functional as well as comment validation" />
+    <MESSAGE value="removed default copyright info" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed default copyright info" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>C:\wamp\www\wordpress</wordpressPath>
@@ -1040,7 +1047,7 @@
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08585858" vertical-offset="0" max-vertical-offset="990">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
           <folding />
         </state>
       </provider>
