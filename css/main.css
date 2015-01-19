@@ -4,8 +4,7 @@ ul.list-group {
 
 #header {
   margin-top: 10px;
-  margin-bottom: 0;
-  background-color: #a50000; }
+  margin-bottom: 0; }
   #header ul.list-group.avatar li {
     padding: 5px;
     overflow: visible; }

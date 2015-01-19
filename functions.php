@@ -45,7 +45,7 @@ function angularTheme_load_angularCore(){
 }
 
 function angularTheme_load_stylesheets(){
-    wp_enqueue_style('main', get_bloginfo('template_directory').'/css/main.css');
+    wp_enqueue_style('main_css', get_bloginfo('template_directory').'/css/main.css');
 
     wp_enqueue_style('bootstrap', get_bloginfo('template_directory').'/style/bootstrap/bootstrap.css');
     wp_enqueue_style('material', get_bloginfo('template_directory').'/style/material/css/material-wfont.min.css');

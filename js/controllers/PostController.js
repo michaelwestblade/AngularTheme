@@ -11,6 +11,7 @@ myapp.controller('PostController', ['$scope','post','CommentsService',function($
         'content':''
     };
     $scope.showCommentForm = false;
+    $scope.forms = {};
 
     $scope.toggleCommentForm = function(){
         $scope.showCommentForm = !$scope.showCommentForm;
@@ -24,15 +25,20 @@ myapp.controller('PostController', ['$scope','post','CommentsService',function($
         }
     );
 
-    $scope.addComment = function(comment){
-        CommentsService.addComment($scope.post.ID,comment)
-            .then(function(data){
-                $scope.comments.push(data);
-                $scope.jsComment.content = "";
-                $scope.showCommentForm = false;
-            },function(result){
-                console.log(result);
-            }
-        );
+    $scope.addComment = function(form,comment){
+        form.submitted = true;
+        if(form.$valid){
+            CommentsService.addComment($scope.post.ID,comment)
+                .then(function(data){
+                    $scope.comments.push(data);
+                    $scope.jsComment.content = "";
+                    $scope.showCommentForm = false;
+                },function(result){
+                    console.log(result);
+                }
+            );
+        }else{
+            console.log('error');
+        }
     }
 }]);

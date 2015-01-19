@@ -21,13 +21,13 @@ function color_selections( $wp_customize ){
         'color_options',
         array(
             'title' => 'Color Options',
-            'description' => 'This is a settings section.',
+            'description' => 'Choose Theme Colors',
             'priority' => 35,
         )
     );
 
     $wp_customize->add_setting(
-        'main_accent_color',
+        'main_bg_color',
         array(
             'default' => '#000000',
             'sanitize_callback' => 'sanitize_hex_color',
@@ -37,11 +37,51 @@ function color_selections( $wp_customize ){
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'main_accent_color',
+            'main_bg_color',
             array(
-                'label' => 'Main Accent Color',
+                'label' => 'Main Background Color',
                 'section' => 'color_options',
-                'settings' => 'main_accent_color',
+                'settings' => 'main_bg_color',
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'headers_bg_color',
+        array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'headers_bg_color',
+            array(
+                'label' => 'Headers Background Color',
+                'section' => 'color_options',
+                'settings' => 'headers_bg_color',
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'headers_nav_color',
+        array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'headers_nav_color',
+            array(
+                'label' => 'Headers Navigation Color',
+                'section' => 'color_options',
+                'settings' => 'headers_nav_color',
             )
         )
     );
@@ -95,7 +135,8 @@ function footer_options( $wp_customize ) {
 
 add_action( 'customize_register', 'footer_options' );
 
-function generate_options_css() {
+function generate_options_css()
+{
 
     $css_dir = get_stylesheet_directory() . '/css/'; // Shorten code, save 1 call
     ob_start(); // Capture all output (output buffering)
@@ -103,9 +144,9 @@ function generate_options_css() {
     require($css_dir . 'styles.php'); // Generate CSS
 
     $css = ob_get_clean(); // Get generated CSS (output buffering)
-    $millis = round(microtime(true) * 1000);
-    file_put_contents($css_dir . 'colors.scss', "", LOCK_EX);
-    file_put_contents($css_dir . 'colors.scss', $css, LOCK_EX); // Save it
+    file_put_contents($css_dir . 'colors.css', $css, LOCK_EX); // Save it
+
+    echo $css;
 }
 
-generate_options_css();
+add_action( 'wp_head', 'generate_options_css');

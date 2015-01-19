@@ -17,30 +17,30 @@
 </div>
 
 <div class="well" ng-show="showCommentForm">
-    <form class="form-horizontal" action="" ng-submit="addComment(jsComment)" >
+    <form class="form-horizontal" name="forms.commentForm" action="" ng-submit="addComment(forms.commentForm,jsComment)" novalidate="">
         <legend>Add a Comment</legend>
 
-        <div class="form-group">
+        <div class="form-group" ng-class="{'has-error':forms.commentForm.author.$error['required'] && forms.commentForm.submitted}">
             <label class="control-label col-lg-2" for="">Name</label>
             <div class="col-lg-4">
                 <div class="form-control-wrapper">
-                    <input ng-disabled="user.data.display_name" type="text" class="form-control" ng-model="jsComment.author"/>
+                    <input ng-disabled="user.data.display_name" type="text" name="author" class="form-control" ng-model="jsComment.author" required=""/>
                 </div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-class="{'has-error':forms.commentForm.authorEmail.$error['required'] && forms.commentForm.submitted}">
             <label class="control-label col-lg-2" for="">Email</label>
             <div class="col-lg-4">
                 <div class="form-control-wrapper">
-                    <input ng-disabled="user.data.user_email" type="text" class="form-control" ng-model="jsComment.author_email"/>
+                    <input ng-disabled="user.data.user_email" type="text" name="authorEmail" class="form-control" ng-model="jsComment.author_email" required=""/>
                 </div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-class="{'has-error':forms.commentForm.content.$error['required'] && forms.commentForm.submitted}">
             <label class="control-label col-lg-2" for="">Comment</label>
             <div class="col-lg-4">
                 <div class="form-control-wrapper">
-                    <textarea name="content" class="form-control" ng-model="jsComment.content" ></textarea>
+                    <textarea name="content" class="form-control" ng-model="jsComment.content" required=""></textarea>
                 </div>
             </div>
         </div>

@@ -12,6 +12,7 @@
                                 <a href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
                             </h4>
                             <span ng-bind-html="post.excerpt | unsafe"></span>
+                            <a href="" ng-if="post.excerpt" ui-sref="post({postId:post.ID})">Read More.</a>
                         </div>
                     </div>
 
@@ -24,6 +25,7 @@
                                 <a href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
                             </h4>
                             <span ng-bind-html="post.excerpt | unsafe"></span>
+                            <a href="" ng-if="post.excerpt" ui-sref="post({postId:post.ID})">Read More.</a>
                         </div>
                     </div>
                 </li>
