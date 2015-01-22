@@ -25,13 +25,13 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
         }
     );
 
-    InstagramService.getMostRecent()
+    /*InstagramService.getMostRecent()
         .then(function(data){
            console.log(data);
             $rootScope.instagram = data;
         },function(errors){
             console.log(errors);
-        });
+        });*/
 }]).
 config(['$stateProvider','$urlRouterProvider','$locationProvider',function($stateProvider,$urlRouterProvider,$locationProvider){
     $urlRouterProvider.otherwise('/');
