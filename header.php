@@ -2,6 +2,7 @@
     <head>
         <title><?php echo get_bloginfo('name'); ?></title>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <base href="/"/>
         <?php wp_head(); ?>
     </head>
     <div id="siteContainer" class="MainBGColor">
@@ -15,8 +16,6 @@
                     <ul class="nav navbar-nav">
                         <li ng-class="{active:$state.includes('home')}"><a href="" ui-sref="home()">Posts</a></li>
                     </ul>
-
-                    <div ng-include="dir+'partials/user-nav.html'"></div>
                 </div>
             </div>
         </nav>

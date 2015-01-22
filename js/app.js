@@ -2,9 +2,9 @@
  * Created by Michael Westblade on 9/27/14.
  */
 // initialize the app
-var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview']);
+var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview','angularUtils.directives.dirDisqus']);
 
-myapp.run(['$rootScope', '$state', '$stateParams','UsersService','InstagramService',function($rootScope, $state, $stateParams,UsersService,InstagramService){
+myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($rootScope, $state, $stateParams,InstagramService){
     // the following data is fetched from the JavaScript variables created by wp_localize_script(), and stored in the Angular rootScope
     $rootScope.dir = BlogInfo.url;
     $rootScope.site = BlogInfo.site;
@@ -32,22 +32,10 @@ myapp.run(['$rootScope', '$state', '$stateParams','UsersService','InstagramServi
         },function(errors){
             console.log(errors);
         });
-
-    // check if user is signed in
-    if($rootScope.user){
-        $rootScope.avatarLoading  = 'loading';
-        UsersService.user($rootScope.user.ID)
-        .then(function(data){
-            $rootScope.user.data.avatar = data.avatar;
-            $rootScope.avatarLoading  = 'loaded';
-        },function(errors){
-            console.log(errors);
-            $rootScope.avatarLoading  = 'loaded';
-        });
-    }
 }]).
-config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+config(['$stateProvider','$urlRouterProvider','$locationProvider',function($stateProvider,$urlRouterProvider,$locationProvider){
     $urlRouterProvider.otherwise('/');
+    $locationProvider.html5Mode(true)
 
     $stateProvider.
     state("home",{

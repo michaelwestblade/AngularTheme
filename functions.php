@@ -34,6 +34,8 @@ function angularTheme_load_angularCore(){
     //register angular js
     wp_register_script('angular-core',get_bloginfo('template_directory').'/scripts/angular/angular.js');
     wp_register_script('angular-route',get_bloginfo('template_directory').'/scripts/angular/angular-route.js');
+    // register angular disqus plugin
+    wp_register_script('angular-disqus',get_bloginfo('template_directory').'/scripts/dirDisqus.js');
 
     // register our angular app
     wp_register_script('angular-app',get_bloginfo('template_directory').'/js/app.js');
@@ -41,6 +43,7 @@ function angularTheme_load_angularCore(){
     // enqueue all scripts
     wp_enqueue_script('angular-core');
     wp_enqueue_script('angular-route');
+    wp_enqueue_script('angular-disqus');
     wp_enqueue_script('angular-app');
 }
 
@@ -82,12 +85,6 @@ function angularTheme_load_services(){
 
     wp_register_script('postService',get_bloginfo('template_directory').'/js/services/PostsService.js');
     wp_enqueue_script('postService');
-
-    wp_register_script('commentsService',get_bloginfo('template_directory').'/js/services/CommentsService.js');
-    wp_enqueue_script('commentsService');
-
-    wp_register_script('usersService',get_bloginfo('template_directory').'/js/services/UsersService.js');
-    wp_enqueue_script('usersService');
 
     wp_register_script('instagramService',get_bloginfo('template_directory').'/js/services/InstagramService.js');
     wp_enqueue_script('instagramService');

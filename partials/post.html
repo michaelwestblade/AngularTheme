@@ -6,4 +6,11 @@
     <div class="post" ng-bind-html="post.content | unsafe"></div>
 </div>
 
-<div ng-include="dir+'partials/comments.html'"></div>
+<div id="comments">
+    <dir-disqus disqus-shortname="michaelwestblade"
+                disqus-identifier="{{ postId }}"
+                disqus-url="{{ postUrl }}"
+                ready-to-bind="{{ contentLoaded }}"
+                disqus-title="{{ post.title }}">
+    </dir-disqus>
+</div>
