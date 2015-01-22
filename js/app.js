@@ -35,7 +35,7 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
 }]).
 config(['$stateProvider','$urlRouterProvider','$locationProvider',function($stateProvider,$urlRouterProvider,$locationProvider){
     $urlRouterProvider.otherwise('/');
-    $locationProvider.html5Mode(true)
+    $locationProvider.hashPrefix('!');
 
     $stateProvider.
     state("home",{

@@ -40,6 +40,14 @@ body {
           border-bottom: 1px solid #000; }
         body #siteContainer #main #postList ul.posts li div.media a.media-left img {
           width: 100px; }
+      body #siteContainer #main #post .mainImage img {
+        display: block;
+        margin: 0 auto; }
+      body #siteContainer #main #post .page-header a {
+        margin-right: 20px; }
+      body #siteContainer #main #post .well p {
+        text-indent: 1.5em;
+        font-size: 1.6rem; }
 
 .loader.spinner {
   width: 40px;
