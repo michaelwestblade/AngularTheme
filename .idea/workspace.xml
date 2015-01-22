@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead74ae0-6a7e-4027-9180-07ddccaec866" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/post.html" afterPath="$PROJECT_DIR$/partials/post.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/libs/posts.scss" afterPath="$PROJECT_DIR$/css/libs/posts.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -76,8 +72,8 @@
       <file leaf-file-name="posts.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/libs/posts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12020202" vertical-offset="0" max-vertical-offset="990">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.36060607" vertical-offset="0" max-vertical-offset="990">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -619,7 +615,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421904707917</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="style changes for post">
+      <created>1421906227222</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1421906227222</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -665,7 +667,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="initial commit" />
     <MESSAGE value="Incorporated angular ui-router" />
     <MESSAGE value="Working pagination" />
     <MESSAGE value="Created post page" />
@@ -690,7 +691,8 @@
     <MESSAGE value="instagram should work without login" />
     <MESSAGE value="commented out instagram" />
     <MESSAGE value="post image fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="post image fix" />
+    <MESSAGE value="style changes for post" />
+    <option name="LAST_COMMIT_MESSAGE" value="style changes for post" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>C:\wamp\www\wordpress</wordpressPath>
@@ -1070,8 +1072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/libs/posts.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12020202" vertical-offset="0" max-vertical-offset="990">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.36060607" vertical-offset="0" max-vertical-offset="990">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>

@@ -46,7 +46,6 @@ body {
       body #siteContainer #main #post .page-header a {
         margin-right: 20px; }
       body #siteContainer #main #post .well p {
-        text-indent: 1.5em;
         font-size: 1.6rem; }
 
 .loader.spinner {
