@@ -9,7 +9,10 @@
         <nav id="header" class="navbar navbar-default HeadersBGColor" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="" ui-sref="home()"><?php echo get_bloginfo('name'); ?></a>
+                    <a class="navbar-brand" href="" ui-sref="home()">
+                        <img class="pull-left" src="<?php echo get_theme_mod( 'logo_img' ); ?>">
+                        <h1 class="pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
+                    </a>
                 </div>
 
                 <div class="collapse navbar-collapse">

@@ -4,17 +4,24 @@ ul.list-group {
 
 #header {
   margin-top: 10px;
-  margin-bottom: 0; }
-  #header ul.list-group.avatar li {
-    padding: 5px;
-    overflow: visible; }
-    #header ul.list-group.avatar li div.row-picture {
-      padding: 0; }
-      #header ul.list-group.avatar li div.row-picture ul.dropdown-menu {
-        top: auto; }
-    #header ul.list-group.avatar li div.row-content {
-      color: #FFF;
-      padding-left: 5px; }
+  margin-bottom: 0;
+  height: 110px; }
+  #header .navbar-header .navbar-brand {
+    height: auto;
+    padding: 5px; }
+    #header .navbar-header .navbar-brand img {
+      width: 100px; }
+    #header .navbar-header .navbar-brand h1 {
+      margin: 0 20px;
+      height: 100px;
+      line-height: 100px;
+      white-space: nowrap; }
+  #header .navbar-collapse {
+    margin: 0; }
+    #header .navbar-collapse .navbar-nav {
+      height: 100px; }
+      #header .navbar-collapse .navbar-nav li {
+        padding: 25px 0; }
 
 #instagramHeader div.row .imageDiv {
   padding: 0; }

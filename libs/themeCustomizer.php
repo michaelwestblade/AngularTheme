@@ -16,6 +16,39 @@ function Customize_Angular_Theme() {
 
 add_action( 'admin_menu', 'Customize_Angular_Theme' );
 
+function image_selections( $wp_customize ){
+    $wp_customize->add_section(
+        'image_options',
+        array(
+            'title' => 'Image Options',
+            'description' => 'Choose Theme Images',
+            'priority' => 35,
+        )
+    );
+
+    $wp_customize->add_setting(
+        'logo_img',
+        array(
+            'default' => '',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'logo_img',
+            array(
+                'label'      => 'Upload a logo',
+                'section'    => 'image_options',
+                'settings'   => 'logo_img'
+            )
+        )
+    );
+
+}
+
+add_action( 'customize_register', 'image_selections' );
+
 function color_selections( $wp_customize ){
     $wp_customize->add_section(
         'color_options',

@@ -1,12 +1,13 @@
-#header{margin-top: 10px;margin-bottom: 0;
-  ul.list-group{
-    &.avatar{
-      li{padding:5px;overflow: visible;
-        div.row-picture{padding: 0;
-          ul.dropdown-menu{top:auto;}
-        }
-        div.row-content{color: #FFF;padding-left: 5px;}
-      }
+#header{margin-top: 10px;margin-bottom: 0;height: 110px;
+  .navbar-header{
+    .navbar-brand{height: auto;padding: 5px;
+      img{width: 100px;}
+      h1{margin: 0 20px;height: 100px;  line-height: 100px;white-space: nowrap;}
+    }
+  }
+  .navbar-collapse{margin: 0;
+    .navbar-nav{height: 100px;
+      li{padding: 25px 0;}
     }
   }
 }
