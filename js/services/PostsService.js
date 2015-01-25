@@ -3,10 +3,13 @@
  */
 myapp.factory('PostsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootScope){
     return {
-        posts : function(posts,page){
+        posts : function(posts,page,catId){
             var deferred = $q.defer();
-
-            ajax.call($rootScope.api+'posts?page='+page+'&filter[posts_per_page]='+posts+'&preview=true',null,'GET',function(data){
+            var params = 'page='+page+'&filter[posts_per_page]='+posts+'&preview=true';
+            if(catId){
+                params+="&filter[cat]="+catId;
+            }
+            ajax.call($rootScope.api+'posts?'+params,null,'GET',function(data){
                 deferred.resolve(data);
             });
 
@@ -16,6 +19,15 @@ myapp.factory('PostsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootSc
             var deferred = $q.defer();
 
             ajax.call($rootScope.api+'posts/'+postId,null,'GET',function(data){
+                deferred.resolve(data.data);
+            });
+
+            return deferred.promise;
+        },
+        getPostCategories : function(){
+            var deferred = $q.defer();
+
+            ajax.call($rootScope.adminAjax+'?action=get_post_categories',null,'GET',function(data){
                 deferred.resolve(data.data);
             });
 

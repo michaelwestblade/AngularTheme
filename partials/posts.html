@@ -1,4 +1,32 @@
 <div class="content" id="postList">
+
+    <div class="page-header">
+        <h1>
+            <span ng-if="!activeCategory">Recent Posts</span>
+            <span ng-if="activeCategory">{{activeCategory.cat_name}} Posts</span>
+        </h1>
+    </div>
+    <div class="row topNav">
+        <div class="col-sm-12">
+            <ul class="nav nav-pills">
+                <li role="presentation">
+                    <div dropdown>
+                        <button type="button" class="btn btn-primary dropdown-toggle">
+                            Categories <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu categories" role="menu">
+                            <li ng-class="{active:!activeCategory}">
+                                <a href="" ng-click="setCategory(null)">Recent Posts</a>
+                            </li>
+                            <li ng-class="{active:activeCategory.cat_ID == category.cat_ID}" ng-repeat="category in postCategories">
+                                <a href="" ng-click="setCategory(category)">{{category.cat_name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="row">
         <div class="col-sm-12">
             <ul class="list-group posts">

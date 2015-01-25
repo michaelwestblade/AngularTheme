@@ -17,7 +17,9 @@
 
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li ng-class="{active:$state.includes('home')}"><a href="" ui-sref="home()">Posts</a></li>
+                        <li ng-class="{active:$state.includes('home')}">
+                            <a href="" ui-sref="home()">Posts</a>
+                        </li>
                     </ul>
                 </div>
             </div>
