@@ -67,9 +67,15 @@ function angularTheme_load_dependencies(){
     // register angular in-view
     wp_register_script('angular-inview',get_bloginfo('template_directory').'/scripts/angular/angular-inview.js');
 
+    // register angular analytics
+    wp_register_script('angular-analytics',get_bloginfo('template_directory').'/scripts/angulartics.js');
+    wp_register_script('angular-analytics-ga',get_bloginfo('template_directory').'/scripts/angulartics-ga.js');
+
     wp_enqueue_script('angular-bootstrap');
     wp_enqueue_script('angular-ui-router');
     wp_enqueue_script('angular-inview');
+    wp_enqueue_script('angular-analytics');
+    wp_enqueue_script('angular-analytics-ga');
 }
 
 function angularTheme_load_controllers(){

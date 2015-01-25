@@ -30,6 +30,9 @@ function plugin_admin_init(){
     add_settings_section('disqus_shortcode', 'Disqus Settings', 'disqus_shortcode_text', 'plugin');
     add_settings_field('disqus_shortcode_text_string', 'Disqus Shortcode Input', 'disqus_shortcode_text_string', 'plugin', 'disqus_shortcode');
 
+    add_settings_section('ga_code', 'Google Analytics ID', 'ga_code_text', 'plugin');
+    add_settings_field('ga_code_text_string', 'Google Analytics ID Input', 'ga_code_text_string', 'plugin', 'ga_code');
+
     add_settings_section('instagram_account_id', 'Instagram Account Id', 'instagram_account_id_text', 'plugin');
     add_settings_field('instagram_account_id_text_string', 'Instagram Account Id Text Input', 'instagram_account_id_text_string', 'plugin', 'instagram_account_id');
 
@@ -45,6 +48,9 @@ function disqus_shortcode_text(){
     echo '<p>Enter your Disqus Shortcode For Comments</p>';
 }
 
+function ga_code_text(){
+    echo '<p>Enter your Google Analytics ID for tracking</p>';
+}
 
 function instagram_account_id_text(){
     echo '<p>Enter your Instagram Account Id</p>';
@@ -62,6 +68,11 @@ function plugin_setting_string() {
 function disqus_shortcode_text_string(){
     $options = get_option('plugin_options');
     echo "<input id='disqus_shortcode_text_string' name='plugin_options[disqus_shortcode]' size='40' type='text' value='{$options['disqus_shortcode']}' />";
+}
+
+function ga_code_text_string(){
+    $options = get_option('plugin_options');
+    echo "<input id='ga_code_text_string' name='plugin_options[ga_code]' size='40' type='text' value='{$options['ga_code']}' />";
 }
 
 function instagram_account_id_text_string(){

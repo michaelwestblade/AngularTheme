@@ -2,7 +2,7 @@
  * Created by Michael Westblade on 9/27/14.
  */
 // initialize the app
-var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview','angularUtils.directives.dirDisqus']);
+var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview','angularUtils.directives.dirDisqus','angulartics', 'angulartics.google.analytics']);
 
 myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($rootScope, $state, $stateParams,InstagramService){
     // the following data is fetched from the JavaScript variables created by wp_localize_script(), and stored in the Angular rootScope
@@ -33,9 +33,11 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
             console.log(errors);
         });*/
 }]).
-config(['$stateProvider','$urlRouterProvider','$locationProvider',function($stateProvider,$urlRouterProvider,$locationProvider){
+config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsProvider',function($stateProvider,$urlRouterProvider,$locationProvider,$analyticsProvider){
     $urlRouterProvider.otherwise('/');
     $locationProvider.hashPrefix('!');
+    $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+    $analyticsProvider.withAutoBase(true);  /* Records full path */
 
     $stateProvider.
     state("home",{
