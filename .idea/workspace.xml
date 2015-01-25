@@ -71,8 +71,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24040404" vertical-offset="0" max-vertical-offset="990">
-              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.25757575" vertical-offset="0" max-vertical-offset="990">
+              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -744,7 +744,13 @@
       <option name="project" value="LOCAL" />
       <updated>1422229052720</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="added analytics">
+      <created>1422229410656</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1422229410656</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1073,6 +1079,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="442">
           <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,8 +1203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24040404" vertical-offset="0" max-vertical-offset="990">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.25757575" vertical-offset="0" max-vertical-offset="990">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
           <folding />
         </state>
       </provider>
