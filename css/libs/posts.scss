@@ -1,4 +1,12 @@
 #postList{
+  .page-header{
+    form{margin-top:30px;
+      .form-group{width: 100%;
+        input{width: 100%;}
+      }
+    }
+    button{margin-top: 30px;}
+  }
   ul.posts{
     li{margin: 20px 0;
       &.last{margin-bottom: 50px; padding-bottom:10px;  border-bottom: 1px solid #000;}

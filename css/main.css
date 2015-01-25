@@ -39,6 +39,14 @@ body {
     body #siteContainer #main {
       min-height: 400px;
       padding: 20px; }
+      body #siteContainer #main #postList .page-header form {
+        margin-top: 30px; }
+        body #siteContainer #main #postList .page-header form .form-group {
+          width: 100%; }
+          body #siteContainer #main #postList .page-header form .form-group input {
+            width: 100%; }
+      body #siteContainer #main #postList .page-header button {
+        margin-top: 30px; }
       body #siteContainer #main #postList ul.posts li {
         margin: 20px 0; }
         body #siteContainer #main #postList ul.posts li.last {

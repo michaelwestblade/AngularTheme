@@ -3,9 +3,12 @@
  */
 myapp.factory('PostsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootScope){
     return {
-        posts : function(posts,page,catId){
+        posts : function(posts,page,query,catId){
             var deferred = $q.defer();
             var params = 'page='+page+'&filter[posts_per_page]='+posts+'&preview=true';
+            if(query){
+                params+="&filter[s]="+query;
+            }
             if(catId){
                 params+="&filter[cat]="+catId;
             }
