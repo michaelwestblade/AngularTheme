@@ -5,7 +5,6 @@
 myapp.controller('PostsController', ['$scope','PostsService','$timeout',function($scope,PostsService,$timeout){
     $scope.posts = [];
     $scope.endOfPOsts = false;
-    $scope.BlogInfo = BlogInfo;
     $scope.postCategories = [];
     $scope.activeCategory;
     $scope.searchTimeout;
@@ -63,22 +62,25 @@ myapp.controller('PostsController', ['$scope','PostsService','$timeout',function
 
     // function to get more posts or pull from cache
     $scope.getPosts = function(page){
-        if( page <= $scope.totalPages ){
-            $scope.loadingPosts = true;
-            PostsService.posts(5,page,$scope.searchQuery,($scope.activeCategory ? $scope.activeCategory.cat_ID : null ))
-                .then(function(posts){
-                    $scope.currentPage++;
-                    $scope.posts = $scope.posts.concat(posts.data);
-                    $scope.totalPages = posts.headers('X-WP-TotalPages');
-                    $scope.postCount = posts.headers('X-WP-Total');
-                    $scope.loadingPosts = false;
-                },function(result){
-                    console.log(result);
-                    $scope.loadingPosts = false;
-                }
-            );
-        }else{
-            $scope.endOfPosts = true;
+        // make sure we're not already loading posts
+        if(!$scope.loadingPosts){
+            if( page <= $scope.totalPages ){
+                $scope.loadingPosts = true;
+                PostsService.posts(5,page,$scope.searchQuery,($scope.activeCategory ? $scope.activeCategory.cat_ID : null ))
+                    .then(function(posts){
+                        $scope.currentPage++;
+                        $scope.posts = $scope.posts.concat(posts.data);
+                        $scope.totalPages = posts.headers('X-WP-TotalPages');
+                        $scope.postCount = posts.headers('X-WP-Total');
+                        $scope.loadingPosts = false;
+                    },function(result){
+                        console.log(result);
+                        $scope.loadingPosts = false;
+                    }
+                );
+            }else{
+                $scope.endOfPosts = true;
+            }
         }
     }
 
