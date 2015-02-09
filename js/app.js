@@ -24,18 +24,17 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
            console.log(event);
         }
     );
-
-    /*InstagramService.getMostRecent()
-        .then(function(data){
-           console.log(data);
-            $rootScope.instagram = data;
-        },function(errors){
-            console.log(errors);
-        });*/
 }]).
 config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsProvider',function($stateProvider,$urlRouterProvider,$locationProvider,$analyticsProvider){
     $urlRouterProvider.otherwise('/');
-    $locationProvider.hashPrefix('!');
+        if(BlogInfo.DEV){
+            $locationProvider.hashPrefix('!');
+        }else{
+            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: false
+            });
+        }
     $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
     $analyticsProvider.withAutoBase(true);  /* Records full path */
 

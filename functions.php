@@ -20,13 +20,19 @@ function angularTheme_enqueue_scripts(){
     angularTheme_load_dependencies();
     $options = get_option('plugin_options');
     $disqus_shortcode = $options['disqus_shortcode'];
+    $whitelist = array('127.0.0.1', "::1");
+    $dev = true;
+
+    if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
+        $dev = false;
+    }
 
     wp_localize_script( 'angular-core', 'WP_API_Settings', array( 'root' => esc_url_raw( get_json_url() ), 'nonce' => wp_create_nonce( 'wp_json' ) ) );
 
     // we need to create a JavaScript variable to store our API endpoint...
     wp_localize_script( 'angular-core', 'AppAPI', array( 'url' => get_bloginfo('wpurl').'/wp-json/') ); // this is the API address of the JSON API plugin
     // ... and useful information such as the theme directory and website url
-    wp_localize_script( 'angular-core', 'BlogInfo', array( 'adminAjax'=>admin_url('admin-ajax.php'),'name' => get_bloginfo('name'), 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'disqus_shortcode' => $disqus_shortcode) );
+    wp_localize_script( 'angular-core', 'BlogInfo', array( 'adminAjax'=>admin_url('admin-ajax.php'),'name' => get_bloginfo('name'), 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'disqus_shortcode' => $disqus_shortcode, 'DEV' => ($dev ? true : false)) );
 
     angularTheme_load_controllers();
     angularTheme_load_services();
