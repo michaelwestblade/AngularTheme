@@ -47,7 +47,7 @@ function image_selections( $wp_customize ){
 
 }
 
-add_action( 'customize_register', 'image_selections' );
+//add_action( 'customize_register', 'image_selections' );
 
 function color_selections( $wp_customize ){
     $wp_customize->add_section(
