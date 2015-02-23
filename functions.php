@@ -6,7 +6,6 @@
  * Time: 2:06 PM
  */
 
-require_once 'libs/Instagram.php';
 require_once 'libs/settingsMenu.php';
 require_once 'libs/themeCustomizer.php';
 require_once 'libs/ajaxFunctions.php';
@@ -111,4 +110,4 @@ function angularTheme_load_directives(){
     wp_enqueue_script('html');
 }
 
-add_theme_support( 'post-thumbnails' );
+//add_theme_support( 'post-thumbnails' );
