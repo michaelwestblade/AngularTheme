@@ -7,7 +7,7 @@
  */
 
 //require_once 'libs/settingsMenu.php';
-//require_once 'libs/themeCustomizer.php';
+require_once 'libs/themeCustomizer.php';
 require_once 'libs/ajaxFunctions.php';
 
 function angularTheme_enqueue_scripts(){
