@@ -110,4 +110,4 @@ function angularTheme_load_directives(){
     wp_enqueue_script('html');
 }
 
-//add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails' );
