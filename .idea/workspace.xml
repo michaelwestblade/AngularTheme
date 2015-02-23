@@ -31,8 +31,8 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06960082" vertical-offset="0" max-vertical-offset="1921">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.052200615" vertical-offset="0" max-vertical-offset="1921">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -493,12 +493,6 @@
       <option name="number" value="Default" />
       <updated>1411844750503</updated>
     </task>
-    <task id="LOCAL-00001" summary="Incorporated angular ui-router">
-      <created>1411856095374</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1411856095374</updated>
-    </task>
     <task id="LOCAL-00002" summary="Working pagination">
       <created>1411872436749</created>
       <option name="number" value="00002" />
@@ -787,7 +781,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424656525504</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="messing with functions.php">
+      <created>1424656581083</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1424656581084</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1235,8 +1235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06960082" vertical-offset="0" max-vertical-offset="1921">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.052200615" vertical-offset="0" max-vertical-offset="1921">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
