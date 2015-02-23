@@ -6,9 +6,9 @@
  * Time: 2:06 PM
  */
 
-require_once 'libs/settingsMenu.php';
-require_once 'libs/themeCustomizer.php';
-require_once 'libs/ajaxFunctions.php';
+//require_once 'libs/settingsMenu.php';
+//require_once 'libs/themeCustomizer.php';
+//require_once 'libs/ajaxFunctions.php';
 
 function angularTheme_enqueue_scripts(){
     angularTheme_load_stylesheets();
