@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead74ae0-6a7e-4027-9180-07ddccaec866" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/themeCustomizer.php" afterPath="$PROJECT_DIR$/libs/themeCustomizer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -52,8 +51,8 @@
       <file leaf-file-name="themeCustomizer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/themeCustomizer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33298647" vertical-offset="428" max-vertical-offset="3145">
-              <caret line="49" column="53" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.14151925" vertical-offset="0" max-vertical-offset="3145">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -494,12 +493,6 @@
       <option name="number" value="Default" />
       <updated>1411844750503</updated>
     </task>
-    <task id="LOCAL-00003" summary="Created post page">
-      <created>1411881516380</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1411881516380</updated>
-    </task>
     <task id="LOCAL-00004" summary="Fixed pagination, configured sass">
       <created>1411941162936</created>
       <option name="number" value="00004" />
@@ -788,7 +781,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424656626649</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="messing with functions.php">
+      <created>1424656711085</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1424656711085</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1236,8 +1235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/themeCustomizer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33298647" vertical-offset="428" max-vertical-offset="3145">
-          <caret line="49" column="53" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.14151925" vertical-offset="0" max-vertical-offset="3145">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding />
         </state>
       </provider>

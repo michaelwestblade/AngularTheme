@@ -11,7 +11,7 @@
  */
 function Customize_Angular_Theme() {
     add_theme_page( 'Customize Angular Theme', 'Customize Angular Theme', 'edit_theme_options', 'customize.php' );
-    generate_options_css();
+    //generate_options_css();
 }
 
 add_action( 'admin_menu', 'Customize_Angular_Theme' );
@@ -47,7 +47,7 @@ function image_selections( $wp_customize ){
 
 }
 
-//add_action( 'customize_register', 'image_selections' );
+add_action( 'customize_register', 'image_selections' );
 
 function color_selections( $wp_customize ){
     $wp_customize->add_section(
