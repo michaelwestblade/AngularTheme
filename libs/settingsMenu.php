@@ -52,6 +52,10 @@ function ga_code_text(){
     echo '<p>Enter your Google Analytics ID for tracking</p>';
 }
 
+function update_post_meta_text(){
+    echo '<p>Enter a meta key to update</p>';
+}
+
 function instagram_account_id_text(){
     echo '<p>Enter your Instagram Account Id</p>';
 }

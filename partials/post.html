@@ -2,7 +2,7 @@
     <div class="main" ng-switch-when="true" ng-switch="layout">
         <div class="row" ng-switch-when="left">
             <div class="mainImage col-sm-4">
-                <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" class="{{ (postMeta['featured_image_position'] ? postMeta['featured_image_position'][0] : 'center') }}" alt=""/>
+                <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/>
             </div>
 
             <div class="body col-sm-8">
