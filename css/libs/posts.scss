@@ -21,7 +21,7 @@
 
 #post{
   .mainImage{
-    img{display: block; margin: 0 auto;}
+    img{display: block; margin: 0 auto; max-width:100%;max-height: 400px;}
   }
   .page-header{
     a{margin-right: 20px;}

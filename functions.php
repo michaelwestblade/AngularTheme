@@ -9,6 +9,7 @@
 require_once 'libs/settingsMenu.php';
 require_once 'libs/themeCustomizer.php';
 require_once 'libs/ajaxFunctions.php';
+require_once 'libs/postOptions.php';
 
 function angularTheme_enqueue_scripts(){
     angularTheme_load_stylesheets();
@@ -111,3 +112,14 @@ function angularTheme_load_directives(){
 }
 
 add_theme_support( 'post-thumbnails' );
+
+function getPostMeta(){
+    $post_id = $_REQUEST['post_id'];
+    $meta_value = get_post_meta( $post_id);
+
+    echo json_encode($meta_value);
+    wp_die();
+}
+
+add_action( 'wp_ajax_nopriv_getPostMeta', 'getPostMeta' );
+add_action( 'wp_ajax_getPostMeta', 'getPostMeta' );

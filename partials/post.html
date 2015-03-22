@@ -1,28 +1,80 @@
-<div id="post">
-    <div class="mainImage">
-        <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}"
-             alt=""/> </a>
+<div id="post" ng-switch="contentLoaded">
+    <div class="main" ng-switch-when="true" ng-switch="layout">
+        <div class="row" ng-switch-when="left">
+            <div class="mainImage col-sm-4">
+                <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" class="{{ (postMeta['featured_image_position'] ? postMeta['featured_image_position'][0] : 'center') }}" alt=""/>
+            </div>
+
+            <div class="body col-sm-8">
+                <div class="page-header">
+                    <a href="" ui-sref="posts()" class="pull-left">
+                        <i class="fa fa-long-arrow-left fa-3x"></i>
+                    </a>
+
+                    <h1 ng-bind-html="post.title | unsafe">
+                        <small>{{post.date | date : 'shortDate' }}</small>
+                    </h1>
+                </div>
+
+                <div class="well">
+                    <div class="post" ng-bind-html="post.content | unsafe"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-switch-when="right">
+            <div class="body col-sm-8">
+                <div class="page-header">
+                    <a href="" ui-sref="posts()" class="pull-left">
+                        <i class="fa fa-long-arrow-left fa-3x"></i>
+                    </a>
+
+                    <h1 ng-bind-html="post.title | unsafe">
+                        <small>{{post.date | date : 'shortDate' }}</small>
+                    </h1>
+                </div>
+
+                <div class="well">
+                    <div class="post" ng-bind-html="post.content | unsafe"></div>
+                </div>
+            </div>
+            <div class="mainImage col-sm-4">
+                <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" class="{{ (postMeta['featured_image_position'] ? postMeta['featured_image_position'][0] : 'center') }}" alt=""/>
+            </div>
+        </div>
+
+        <div class="row" ng-switch-when="center">
+            <div class="mainImage col-sm-12">
+                <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" class="{{ (postMeta['featured_image_position'] ? postMeta['featured_image_position'][0] : 'center') }}" alt=""/>
+            </div>
+            <div class="body col-sm-12">
+                <div class="page-header">
+                    <a href="" ui-sref="posts()" class="pull-left">
+                        <i class="fa fa-long-arrow-left fa-3x"></i>
+                    </a>
+
+                    <h1 ng-bind-html="post.title | unsafe">
+                        <small>{{post.date | date : 'shortDate' }}</small>
+                    </h1>
+                </div>
+
+                <div class="well">
+                    <div class="post" ng-bind-html="post.content | unsafe"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="comments" ng-if="disqus_shortcode">
+            <dir-disqus disqus-shortname="{{disqus_shortcode}}"
+                        disqus-identifier="{{ postId }}"
+                        disqus-url="{{ postUrl }}"
+                        disqus-title="{{ post.title }}">
+            </dir-disqus>
+        </div>
     </div>
-
-    <div class="page-header">
-        <a href="" ui-sref="posts()" class="pull-left">
-            <i class="fa fa-long-arrow-left fa-3x"></i>
-        </a>
-
-        <h1>{{post.title}}
-            <small>{{post.date | date : 'shortDate' }}</small>
-        </h1>
-    </div>
-
-    <div class="well">
-        <div class="post" ng-bind-html="post.content | unsafe"></div>
-    </div>
-
-    <div id="comments" ng-if="disqus_shortcode">
-        <dir-disqus disqus-shortname="{{disqus_shortcode}}"
-                    disqus-identifier="{{ postId }}"
-                    disqus-url="{{ postUrl }}"
-                    disqus-title="{{ post.title }}">
-        </dir-disqus>
+    <div class="loading" ng-switch-default="">
+        <div class="pageLoading text-center">
+            <i class="fa fa-refresh fa-spin fa-5x"></i>
+        </div>
     </div>
 </div>
