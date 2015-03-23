@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ead74ae0-6a7e-4027-9180-07ddccaec866" name="Default" comment="made header responsive">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+    <list default="true" id="ead74ae0-6a7e-4027-9180-07ddccaec866" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AngularTheme.iws" />
@@ -460,12 +459,6 @@
       <option name="number" value="Default" />
       <updated>1411844750503</updated>
     </task>
-    <task id="LOCAL-00009" summary="header styling">
-      <created>1413676241241</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1413676241241</updated>
-    </task>
     <task id="LOCAL-00010" summary="avatar styling">
       <created>1413676719193</created>
       <option name="number" value="00010" />
@@ -754,7 +747,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427070611793</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="forgot a class">
+      <created>1427071554621</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1427071554621</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -801,7 +800,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="dropdown menu for header, loading animation" />
     <MESSAGE value="started work on options page" />
     <MESSAGE value="moved instagram shiz to options" />
     <MESSAGE value="working lazy load with animations" />
@@ -826,7 +824,8 @@
     <MESSAGE value="added settings for featured image position" />
     <MESSAGE value="added admin panel to set meta key" />
     <MESSAGE value="made header responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="made header responsive" />
+    <MESSAGE value="forgot a class" />
+    <option name="LAST_COMMIT_MESSAGE" value="forgot a class" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>C:\wamp\www\wordpress</wordpressPath>
