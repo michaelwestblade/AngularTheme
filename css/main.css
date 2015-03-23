@@ -12,6 +12,9 @@ ul.list-group {
     height: 100px;
     line-height: 100px;
     white-space: nowrap; }
+    @media (max-width: 767px) {
+      #header .navbar-brand h1 {
+        font-size: 18px; } }
 #header .navbar-collapse .nav li {
   padding: 25px 0; }
 
