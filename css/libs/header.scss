@@ -3,8 +3,16 @@
     img{width: 100px;}
     h1{margin: 0 20px;height: 100px;  line-height: 100px;white-space: nowrap;
       @include breakpoint(xs){
-        font-size: 18px;
+        font-size: 16px;
+        max-width: 100px;
       }
+    }
+  }
+  .navbar-toggle{
+    @include breakpoint(xs){
+      font-size: 16px;
+      height: 110px;
+      margin: 0;
     }
   }
   .navbar-collapse{

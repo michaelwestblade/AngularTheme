@@ -14,7 +14,13 @@ ul.list-group {
     white-space: nowrap; }
     @media (max-width: 767px) {
       #header .navbar-brand h1 {
-        font-size: 18px; } }
+        font-size: 16px;
+        max-width: 100px; } }
+@media (max-width: 767px) {
+  #header .navbar-toggle {
+    font-size: 16px;
+    height: 110px;
+    margin: 0; } }
 #header .navbar-collapse .nav li {
   padding: 25px 0; }
 
