@@ -18,29 +18,29 @@
         <?php endif; ?>
         <?php wp_head(); ?>
     </head>
-    <div id="siteContainer" class="MainBGColor">
-        <nav id="header" class="navbar navbar-default HeadersBGColor">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="" ui-sref="home()">
-                        <img class="pull-left" src="<?php echo get_theme_mod('logo_img'); ?>">
+    <body>
+        <div id="siteContainer" class="MainBGColor">
+            <nav id="header" class="navbar navbar-default HeadersBGColor">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="" ui-sref="home()">
+                            <img class="pull-left" src="<?php echo get_theme_mod('logo_img'); ?>">
 
-                        <h1 class="pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
-                    </a>
+                            <h1 class="pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
+                        <ul class="nav navbar-nav">
+                            <li ng-class="{active:$state.includes('home')}">
+                                <a href="" ui-sref="home()">Posts</a>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
                 </div>
-                <div id="navbar" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
-                    <ul class="nav navbar-nav">
-                        <li ng-class="{active:$state.includes('home')}">
-                            <a href="" ui-sref="home()">Posts</a>
-                        </li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </nav>
-        <body>
+            </nav>
