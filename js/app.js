@@ -4,6 +4,10 @@
 // initialize the app
 var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview','angularUtils.directives.dirDisqus','angulartics', 'angulartics.google.analytics']);
 
+myapp.controller('NavmenuCtrl', function ($scope) {
+    $scope.isCollapsed = true;
+});
+
 myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($rootScope, $state, $stateParams,InstagramService){
     // the following data is fetched from the JavaScript variables created by wp_localize_script(), and stored in the Angular rootScope
     $rootScope.dir = BlogInfo.url;

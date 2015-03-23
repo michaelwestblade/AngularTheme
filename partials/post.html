@@ -1,11 +1,11 @@
 <div id="post" ng-switch="contentLoaded">
     <div class="main" ng-switch-when="true" ng-switch="layout">
         <div class="row" ng-switch-when="left">
-            <div class="mainImage col-sm-4">
+            <div class="mainImage col-md-4">
                 <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/>
             </div>
 
-            <div class="body col-sm-8">
+            <div class="body col-md-8">
                 <div class="page-header">
                     <a href="" ui-sref="posts()" class="pull-left">
                         <i class="fa fa-long-arrow-left fa-3x"></i>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="row" ng-switch-when="right">
-            <div class="body col-sm-8">
+            <div class="body col-md-8">
                 <div class="page-header">
                     <a href="" ui-sref="posts()" class="pull-left">
                         <i class="fa fa-long-arrow-left fa-3x"></i>
@@ -38,7 +38,7 @@
                     <div class="post" ng-bind-html="post.content | unsafe"></div>
                 </div>
             </div>
-            <div class="mainImage col-sm-4">
+            <div class="mainImage col-md-4">
                 <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" class="{{ (postMeta['featured_image_position'] ? postMeta['featured_image_position'][0] : 'center') }}" alt=""/>
             </div>
         </div>

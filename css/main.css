@@ -2,26 +2,18 @@
 ul.list-group {
   margin-bottom: 0; }
 
-#header {
-  margin-top: 10px;
-  margin-bottom: 0;
-  height: 110px; }
-  #header .navbar-header .navbar-brand {
-    height: auto;
-    padding: 5px; }
-    #header .navbar-header .navbar-brand img {
-      width: 100px; }
-    #header .navbar-header .navbar-brand h1 {
-      margin: 0 20px;
-      height: 100px;
-      line-height: 100px;
-      white-space: nowrap; }
-  #header .navbar-collapse {
-    margin: 0; }
-    #header .navbar-collapse .navbar-nav {
-      height: 100px; }
-      #header .navbar-collapse .navbar-nav li {
-        padding: 25px 0; }
+#header .navbar-brand {
+  height: auto;
+  padding: 5px; }
+  #header .navbar-brand img {
+    width: 100px; }
+  #header .navbar-brand h1 {
+    margin: 0 20px;
+    height: 100px;
+    line-height: 100px;
+    white-space: nowrap; }
+#header .navbar-collapse .nav li {
+  padding: 25px 0; }
 
 #instagramHeader div.row .imageDiv {
   padding: 0; }
@@ -58,8 +50,7 @@ body {
       body #siteContainer #main #post .mainImage img {
         display: block;
         margin: 0 auto;
-        max-width: 100%;
-        max-height: 400px; }
+        max-width: 100%; }
       body #siteContainer #main #post .page-header a {
         margin-right: 20px; }
       body #siteContainer #main #post .well p {

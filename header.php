@@ -19,22 +19,52 @@
         <?php wp_head(); ?>
     </head>
     <div id="siteContainer" class="MainBGColor">
-        <nav id="header" class="navbar navbar-default HeadersBGColor" role="navigation">
-            <div class="container-fluid">
+        <nav id="header" class="navbar navbar-default">
+            <div class="container">
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="navbar-brand" href="" ui-sref="home()">
-                        <img class="pull-left" src="<?php echo get_theme_mod( 'logo_img' ); ?>">
+                        <img class="pull-left" src="<?php echo get_theme_mod('logo_img'); ?>">
+
                         <h1 class="pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
                     </a>
                 </div>
-
-                <div class="collapse navbar-collapse">
+                <div id="navbar" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
                     <ul class="nav navbar-nav">
                         <li ng-class="{active:$state.includes('home')}">
                             <a href="" ui-sref="home()">Posts</a>
                         </li>
                     </ul>
-                </div>
+                </div><!--/.nav-collapse -->
             </div>
         </nav>
+
+        <!--<div id="header" class="navbar navbar-default HeadersBGColor" role="navigation" ng-controller="NavmenuCtrl">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button class="btn btn-navbar navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="" ui-sref="home()">
+                        <img class="pull-left" src="<?php echo get_theme_mod('logo_img'); ?>">
+
+                        <h1 class="pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
+                    </a>
+                    <div class="collapse navbar-collapse" ng-class="{collapse: isCollapsed}">
+                        <ul class="nav">
+                            <li ng-class="{active:$state.includes('home')}">
+                                <a href="" ui-sref="home()">Posts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>-->
         <body>
