@@ -2,7 +2,7 @@
  * Created by Michael Westblade on 9/27/14.
  */
 // initialize the app
-var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview','angularUtils.directives.dirDisqus','angulartics', 'angulartics.google.analytics']);
+var myapp = angular.module('myapp',['ngRoute','ui.router','ui.bootstrap','angular-inview','angularUtils.directives.dirDisqus','angulartics', 'angulartics.google.analytics','720kb.socialshare']);
 
 myapp.controller('NavmenuCtrl', function ($scope) {
     $scope.isCollapsed = true;

@@ -1,5 +1,8 @@
 #postList{
   .page-header{
+    h1{
+      span{font-weight: 400;}
+    }
     form{margin-top:30px;
       .form-group{width: 100%;
         input{width: 100%;}
@@ -27,6 +30,10 @@
     a{margin-right: 20px;}
   }
   .well{
-    p{font-size: 1.6rem;}
+    p{font-size: 1.6rem;color:#000;padding: 20px;}
+  }
+  .share{
+    border-top: 1px solid #eee;
+    margin-top: 40px;
   }
 }

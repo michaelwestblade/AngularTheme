@@ -78,11 +78,15 @@ function angularTheme_load_dependencies(){
     wp_register_script('angular-analytics',get_bloginfo('template_directory').'/scripts/angulartics.js');
     wp_register_script('angular-analytics-ga',get_bloginfo('template_directory').'/scripts/angulartics-ga.js');
 
+    // social share
+    wp_register_script('angular-social-share',get_bloginfo('template_directory').'/scripts/angular-socialshare.js');
+
     wp_enqueue_script('angular-bootstrap');
     wp_enqueue_script('angular-ui-router');
     wp_enqueue_script('angular-inview');
     wp_enqueue_script('angular-analytics');
     wp_enqueue_script('angular-analytics-ga');
+    wp_enqueue_script('angular-social-share');
 }
 
 function angularTheme_load_controllers(){
