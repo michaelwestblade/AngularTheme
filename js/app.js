@@ -18,19 +18,26 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
     $rootScope.user = BlogInfo.user;
     $rootScope.adminAjax = BlogInfo.adminAjax;
     $rootScope.instagram = [];
+    $rootScope.pageLoading = 'loaded';
 
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
 
+    $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
+        $rootScope.pageLoading = 'loading';
+        console.log('from: '+fromState.name+', to: '+toState.name);
+    });
+
     // set current level context on state change
-    $rootScope.$on('$stateChangeSuccess',
-        function(event, toState, toParams, fromState, fromParams){
-           console.log(event);
-        }
-    );
+    $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams) {
+        $rootScope.pageLoading = 'loaded';
+        console.log('from: '+fromState.name+', to: '+toState.name);
+    });
 }]).
 config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsProvider',function($stateProvider,$urlRouterProvider,$locationProvider,$analyticsProvider){
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider
+        .when('','/posts')
+        .otherwise('/');
         if(BlogInfo.DEV){
             $locationProvider.hashPrefix('!');
         }else{
@@ -44,9 +51,14 @@ config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsPro
 
     $stateProvider.
     state("home",{
-       url:"/",
-       templateUrl:BlogInfo.url+'partials/posts.html',
-       controller:'PostsController'
+        url:"/home",
+        templateUrl:BlogInfo.url+'partials/page.html',
+        controller:'PageController',
+        resolve : {
+            page : function($stateParams,PostsService){
+                return PostsService.page(homepageId);
+            }
+        }
     }).
     state("posts",{
         url:"/posts",
@@ -54,7 +66,7 @@ config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsPro
         controller:'PostsController'
     }).
     state("post",{
-       url:"/posts/post/{postId}",
+       url:"/post/{postId}",
        templateUrl:BlogInfo.url+'partials/post.html',
        controller:'PostController',
        resolve : {

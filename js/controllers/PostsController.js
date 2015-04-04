@@ -2,7 +2,8 @@
  * Created by Michael Westblade on 9/27/14.
  */
 // add a controller
-myapp.controller('PostsController', ['$scope','PostsService','$timeout',function($scope,PostsService,$timeout){
+myapp.controller('PostsController', ['$rootScope','$scope','PostsService','$timeout',function($rootScope,$scope,PostsService,$timeout){
+    $rootScope.pageLoading = 'loaded';
     $scope.posts = [];
     $scope.endOfPOsts = false;
     $scope.postCategories = [];

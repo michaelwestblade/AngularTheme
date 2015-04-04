@@ -24,6 +24,11 @@
             ga('create', '<?php echo $ga_code; ?>', 'auto');
         </script>
         <?php endif; ?>
+
+        <script>
+            var homepageId;
+        </script>
+
         <?php wp_head(); ?>
     </head>
     <body>
@@ -46,7 +51,10 @@
                     <div id="navbar" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
                         <ul class="nav navbar-nav">
                             <li ng-class="{active:$state.includes('home')}">
-                                <a href="" ui-sref="home()">Posts</a>
+                                <a href="" ui-sref="home()">Home</a>
+                            </li>
+                            <li ng-class="{active:$state.includes('posts')||$state.includes('post')}">
+                                <a href="" ui-sref="posts()">Posts</a>
                             </li>
                             <?php build_header_menu(); ?>
                         </ul>
