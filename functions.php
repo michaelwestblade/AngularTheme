@@ -11,6 +11,7 @@ require_once 'libs/themeCustomizer.php';
 require_once 'libs/ajaxFunctions.php';
 require_once 'libs/postOptions.php';
 require_once 'libs/metaKeySettings.php';
+require_once 'libs/menus.php';
 
 function angularTheme_enqueue_scripts(){
     angularTheme_load_stylesheets();
@@ -96,6 +97,9 @@ function angularTheme_load_controllers(){
 
     wp_register_script('postController',get_bloginfo('template_directory').'/js/controllers/PostController.js');
     wp_enqueue_script('postController');
+
+    wp_register_script('pageController',get_bloginfo('template_directory').'/js/controllers/PageController.js');
+    wp_enqueue_script('pageController');
 }
 
 function angularTheme_load_services(){
@@ -128,3 +132,4 @@ function getPostMeta(){
 
 add_action( 'wp_ajax_nopriv_getPostMeta', 'getPostMeta' );
 add_action( 'wp_ajax_getPostMeta', 'getPostMeta' );
+

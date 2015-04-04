@@ -62,5 +62,15 @@ config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsPro
                return PostsService.post($stateParams.postId);
            }
        }
+    }).
+    state("page",{
+        url:"/pages/page/{pageId}",
+        templateUrl:BlogInfo.url+'partials/page.html',
+        controller:'PageController',
+        resolve : {
+            page : function($stateParams,PostsService){
+                return PostsService.page($stateParams.pageId);
+            }
+        }
     });
 }]);

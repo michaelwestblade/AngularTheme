@@ -27,6 +27,15 @@ myapp.factory('PostsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootSc
 
             return deferred.promise;
         },
+        page : function(pageId){
+            var deferred = $q.defer();
+
+            ajax.call($rootScope.api+'pages/'+pageId,null,'GET',function(data){
+                deferred.resolve(data.data);
+            });
+
+            return deferred.promise;
+        },
         getPostMeta : function(postId){
             var deferred = $q.defer();
 

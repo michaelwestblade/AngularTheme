@@ -4,6 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <base href=""/>
+
+        <meta property="og:image" content="<?php echo get_bloginfo('template_directory');?>/img/default.jpg"/>
+        <meta property="og:title" content="<?php echo get_bloginfo('name'); ?>"/>
+        <meta property="og:url" content="<?php echo  get_bloginfo('wpurl'); ?>"/>
+        <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>"/>
+        <meta property="og:type" content="blog"/>
+
         <?php
         $options = get_option('plugin_options');
         $ga_code = $options['ga_code'];
@@ -41,6 +48,7 @@
                             <li ng-class="{active:$state.includes('home')}">
                                 <a href="" ui-sref="home()">Posts</a>
                             </li>
+                            <?php build_header_menu(); ?>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
