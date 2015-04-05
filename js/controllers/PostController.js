@@ -12,7 +12,7 @@ myapp.controller('PostController', ['$scope','post','PostsService','$state',func
     PostsService.getPostMeta(post.ID)
         .then(function(data){
             $scope.postMeta = data;
-            $scope.layout = (data['featured_image_position'] && data['featured_image_position'][0] ? data['featured_image_position'][0] : 'center');
+            $scope.layout = (data['featured_image_position'] ? data['featured_image_position'] : 'center');
             $scope.contentLoaded = true;
         },function(errors){
             console.log(errors);

@@ -25,13 +25,11 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
 
     $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
         $rootScope.pageLoading = 'loading';
-        console.log('from: '+fromState.name+', to: '+toState.name);
     });
 
     // set current level context on state change
     $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams) {
         $rootScope.pageLoading = 'loaded';
-        console.log('from: '+fromState.name+', to: '+toState.name);
     });
 }]).
 config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsProvider',function($stateProvider,$urlRouterProvider,$locationProvider,$analyticsProvider){
@@ -56,7 +54,7 @@ config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsPro
         controller:'PageController',
         resolve : {
             page : function($stateParams,PostsService){
-                return PostsService.page(homepageId);
+                return PostsService.page(PageInfo.home);
             }
         }
     }).

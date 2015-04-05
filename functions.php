@@ -10,6 +10,7 @@ require_once 'libs/settingsMenu.php';
 require_once 'libs/themeCustomizer.php';
 require_once 'libs/ajaxFunctions.php';
 require_once 'libs/postOptions.php';
+require_once 'libs/pageOptions.php';
 require_once 'libs/metaKeySettings.php';
 require_once 'libs/menus.php';
 
@@ -35,6 +36,8 @@ function angularTheme_enqueue_scripts(){
     wp_localize_script( 'angular-core', 'AppAPI', array( 'url' => get_bloginfo('wpurl').'/wp-json/') ); // this is the API address of the JSON API plugin
     // ... and useful information such as the theme directory and website url
     wp_localize_script( 'angular-core', 'BlogInfo', array( 'adminAjax'=>admin_url('admin-ajax.php'),'name' => get_bloginfo('name'), 'url' => get_bloginfo('template_directory').'/', 'site' => get_bloginfo('wpurl'), 'disqus_shortcode' => $disqus_shortcode, 'DEV' => ($dev ? true : false)) );
+
+    wp_localize_script( 'angular-core', 'PageInfo', array( 'home'=>$options['home_page'] ));
 
     angularTheme_load_controllers();
     angularTheme_load_services();

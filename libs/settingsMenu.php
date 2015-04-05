@@ -73,7 +73,7 @@ function home_page_text_string()
     $r = '';
 
     echo ' <select name="plugin_options[home_page]" id="home-page-options">';
-    echo '<option value="0">None</option>';
+    echo '<option value="0">Posts</option>';
     foreach ( $pages as $page ) {
         if ( $selected == $page->ID ) // Make default first in list
             echo '<option selected="selected" value="'.trim($page->ID).'">'.trim($page->post_title).'</option>';

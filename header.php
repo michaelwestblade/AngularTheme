@@ -14,6 +14,7 @@
         <?php
         $options = get_option('plugin_options');
         $ga_code = $options['ga_code'];
+        $home = $options['home_page'];
         ?>
         <?php if($ga_code): ?>
         <script>
@@ -24,10 +25,6 @@
             ga('create', '<?php echo $ga_code; ?>', 'auto');
         </script>
         <?php endif; ?>
-
-        <script>
-            var homepageId;
-        </script>
 
         <?php wp_head(); ?>
     </head>
@@ -42,7 +39,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="" ui-sref="home()">
+                        <a class="navbar-brand" href="" <?php echo ($home !== "0" ? 'ui-sref="home()"' : 'ui-sref="posts()"') ?>>
                             <img class="pull-left" src="<?php echo get_theme_mod('logo_img'); ?>">
 
                             <h1 class="pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
@@ -50,9 +47,6 @@
                     </div>
                     <div id="navbar" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
                         <ul class="nav navbar-nav">
-                            <li ng-class="{active:$state.includes('home')}">
-                                <a href="" ui-sref="home()">Home</a>
-                            </li>
                             <li ng-class="{active:$state.includes('posts')||$state.includes('post')}">
                                 <a href="" ui-sref="posts()">Posts</a>
                             </li>

@@ -39,6 +39,8 @@
                 <div class="well">
                     <div class="post" ng-bind-html="post.content | unsafe"></div>
                 </div>
+
+                <div ng-include="dir+'/partials/sharing-buttons.html'"></div>
             </div>
             <div class="mainImage col-md-4">
                 <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" class="{{ (postMeta['featured_image_position'] ? postMeta['featured_image_position'][0] : 'center') }}" alt=""/>
@@ -63,6 +65,8 @@
                 <div class="well">
                     <div class="post" ng-bind-html="post.content | unsafe"></div>
                 </div>
+
+                <div ng-include="dir+'/partials/sharing-buttons.html'"></div>
             </div>
         </div>
 
