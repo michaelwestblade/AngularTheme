@@ -6,10 +6,13 @@
             <div ng-switch="contentLoaded">
                 <div ng-switch-when="true" ng-switch="template">
                     <div ng-switch-when="faq">
-                        <div ng-include="dir+'/partials/faq.html'"></div>
+                        <div ng-include="dir+'/partials/page/faq.html'"></div>
                     </div>
-                    <div ng-switch-when="about">
-                        <div ng-include="dir+'/partials/about.html'"></div>
+                    <div ng-switch-when="projects">
+                        <div ng-include="dir+'/partials/page/projects.html'"></div>
+                    </div>
+                    <div ng-switch-default="">
+                        <div ng-include="dir+'/partials/page/default.html'"></div>
                     </div>
                 </div>
                 <div class="loading" ng-switch-default="">

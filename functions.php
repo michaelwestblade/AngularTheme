@@ -6,6 +6,7 @@
  * Time: 2:06 PM
  */
 
+require_once 'libs/PostOption.php';
 require_once 'libs/settingsMenu.php';
 require_once 'libs/themeCustomizer.php';
 require_once 'libs/ajaxFunctions.php';
@@ -13,6 +14,7 @@ require_once 'libs/postOptions.php';
 require_once 'libs/pageOptions.php';
 require_once 'libs/metaKeySettings.php';
 require_once 'libs/menus.php';
+require_once 'libs/customPostTypes.php';
 
 function angularTheme_enqueue_scripts(){
     angularTheme_load_stylesheets();
@@ -48,6 +50,10 @@ function angularTheme_load_angularCore(){
     //register angular js
     wp_register_script('angular-core',get_bloginfo('template_directory').'/scripts/angular/angular.js');
     wp_register_script('angular-route',get_bloginfo('template_directory').'/scripts/angular/angular-route.js');
+    wp_register_script('angular-animate',get_bloginfo('template_directory').'/scripts/angular/angular-animate.js');
+    wp_register_script('angular-aria',get_bloginfo('template_directory').'/scripts/angular/angular-aria.js');
+    wp_register_script('angular-sanitize',get_bloginfo('template_directory').'/scripts/angular/angular-sanitize.js');
+    wp_register_script('angular-material',get_bloginfo('template_directory').'/scripts/angular-material.js');
     // register angular disqus plugin
     wp_register_script('angular-disqus',get_bloginfo('template_directory').'/scripts/dirDisqus.js');
 
@@ -57,6 +63,10 @@ function angularTheme_load_angularCore(){
     // enqueue all scripts
     wp_enqueue_script('angular-core');
     wp_enqueue_script('angular-route');
+    wp_enqueue_script('angular-animate');
+    wp_enqueue_script('angular-aria');
+    wp_enqueue_script('angular-sanitize');
+    //wp_enqueue_script('angular-material');
     wp_enqueue_script('angular-disqus');
     wp_enqueue_script('angular-app');
 }
@@ -65,7 +75,8 @@ function angularTheme_load_stylesheets(){
     wp_enqueue_style('main_css', get_bloginfo('template_directory').'/css/main.css');
 
     wp_enqueue_style('bootstrap', get_bloginfo('template_directory').'/style/bootstrap/bootstrap.css');
-    wp_enqueue_style('material', get_bloginfo('template_directory').'/style/material/css/material-wfont.min.css');
+    wp_enqueue_style('bootstrap-material', get_bloginfo('template_directory').'/style/material/css/material-wfont.min.css');
+    //wp_enqueue_style('angular-material', get_bloginfo('template_directory').'/style/angular-material.min.css');
 }
 
 function angularTheme_load_dependencies(){

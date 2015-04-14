@@ -1,0 +1,16 @@
+<div id="faq">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default" ng-if="$index<faqs.length/2" ng-repeat="faq in faqs">
+                <div class="panel-heading" ng-bind-html="faq.title"></div>
+                <div class="panel-body" ng-bind-html="faq.content"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default" ng-if="$index>faqs.length/2" ng-repeat="faq in faqs">
+                <div class="panel-heading" ng-bind-html="faq.title"></div>
+                <div class="panel-body" ng-bind-html="faq.content"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,19 @@ myapp.controller('PageController', ['$scope','page','PostsService','$state',func
         .then(function(data){
             $scope.pageMeta = data;
             $scope.template = (data['page_template'] ? data['page_template'] : 'page');
-            $scope.contentLoaded = true;
+
+            if($scope.template=='faq'){
+                PostsService.faqs()
+                    .then(function(result){
+                        $scope.faqs = result.data;
+                        $scope.contentLoaded = true;
+                    },function(errors){
+                        console.log(errors);
+                        $scope.contentLoaded = true;
+                    });
+            }else{
+                $scope.contentLoaded = true;
+            }
         },function(errors){
             console.log(errors);
             $scope.contentLoaded = true;

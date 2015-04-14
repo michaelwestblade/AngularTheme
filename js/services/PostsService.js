@@ -18,6 +18,14 @@ myapp.factory('PostsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootSc
 
             return deferred.promise;
         },
+        faqs : function(){
+            var deferred = $q.defer();
+            ajax.call($rootScope.api+'posts?type[]=faq',null,'GET',function(data){
+                deferred.resolve(data);
+            });
+
+            return deferred.promise;
+        },
         post : function(postId){
             var deferred = $q.defer();
 
