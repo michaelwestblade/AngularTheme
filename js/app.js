@@ -30,6 +30,12 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
     // set current level context on state change
     $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams) {
         $rootScope.pageLoading = 'loaded';
+
+        if(toState && toState.name=='page'){
+            $rootScope.pageId = toParams.pageId;
+        }else{
+            $rootScope.pageId = null;
+        }
     });
 }]).
 config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsProvider',function($stateProvider,$urlRouterProvider,$locationProvider,$analyticsProvider){

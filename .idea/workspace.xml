@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead74ae0-6a7e-4027-9180-07ddccaec866" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/pageOptions.php" afterPath="$PROJECT_DIR$/libs/pageOptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/menus.php" afterPath="$PROJECT_DIR$/libs/menus.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AngularTheme.iws" />
@@ -41,18 +42,28 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="530" max-vertical-offset="1547">
-              <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1649">
+              <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/PostController.js">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="442">
-              <caret line="19" column="7" selection-start-line="11" selection-start-column="4" selection-end-line="19" selection-end-column="7" />
+            <state vertical-scroll-proportion="-29.615385" vertical-offset="63" max-vertical-offset="1054">
+              <caret line="49" column="72" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menus.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libs/menus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5146317" vertical-offset="0" max-vertical-offset="991">
+              <caret line="35" column="103" selection-start-line="35" selection-start-column="103" selection-end-line="35" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -108,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageOptions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pageOptions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/pageOptions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0600631" vertical-offset="0" max-vertical-offset="3995">
-              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state vertical-scroll-proportion="-86.96154" vertical-offset="0" max-vertical-offset="3995">
+              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding>
                 <element signature="e#6#100#0#PHP" expanded="true" />
                 <marker date="1428294093103" expanded="true" signature="1435:1520" placeholder="..." />
@@ -160,14 +171,12 @@
         <option value="$PROJECT_DIR$/css/libs/header.scss" />
         <option value="$PROJECT_DIR$/partials/sharing-buttons.html" />
         <option value="$PROJECT_DIR$/css/libs/posts.scss" />
-        <option value="$PROJECT_DIR$/libs/menus.php" />
         <option value="$PROJECT_DIR$/js/controllers/PostsController.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/partials/posts.html" />
         <option value="$PROJECT_DIR$/libs/settingsMenu.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/js/services/PostsService.js" />
         <option value="$PROJECT_DIR$/js/controllers/PostController.js" />
@@ -178,6 +187,8 @@
         <option value="$PROJECT_DIR$/libs/postOptions.php" />
         <option value="$PROJECT_DIR$/partials/page.html" />
         <option value="$PROJECT_DIR$/libs/pageOptions.php" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/libs/menus.php" />
       </list>
     </option>
   </component>
@@ -201,6 +212,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1176" />
   </component>
@@ -367,12 +379,12 @@
       <TestRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
+      <method />
+    </configuration>
     <configuration default="true" type="MongoRunConfiguration" factoryName="Mongo">
       <setting name="path" value="" />
       <setting name="shellParams" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -388,6 +400,9 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -395,9 +410,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -419,12 +431,6 @@
       <created>1411844750503</created>
       <option name="number" value="Default" />
       <updated>1411844750503</updated>
-    </task>
-    <task id="LOCAL-00018" summary="working lazy load with animations">
-      <created>1421519527265</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1421519527265</updated>
     </task>
     <task id="LOCAL-00019" summary="working on dynamic scss">
       <created>1421529244298</created>
@@ -714,11 +720,17 @@
       <option name="project" value="LOCAL" />
       <updated>1428214227607</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="built postOptions class">
+      <created>1428294131858</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1428294131859</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1936" height="1176" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -735,15 +747,15 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854405" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30239233" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32981783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -761,7 +773,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="chnaged end of posts text" />
     <MESSAGE value="Moved comments to disqus" />
     <MESSAGE value="disqus now configurable" />
     <MESSAGE value="instagram should work without login" />
@@ -786,7 +797,8 @@
     <MESSAGE value="Pages functional, added fb open graph stuff" />
     <MESSAGE value="added home page setting" />
     <MESSAGE value="working page templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="working page templates" />
+    <MESSAGE value="built postOptions class" />
+    <option name="LAST_COMMIT_MESSAGE" value="built postOptions class" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>C:\wamp\www\wordpress</wordpressPath>
@@ -1049,20 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/menus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="680">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.76923" vertical-offset="63" max-vertical-offset="1054">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/ajaxFunctions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="561">
@@ -1088,14 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <caret line="19" column="7" selection-start-line="11" selection-start-column="4" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="530" max-vertical-offset="1547">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1164,14 +1154,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/pageOptions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0600631" vertical-offset="0" max-vertical-offset="3995">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state vertical-scroll-proportion="-86.96154" vertical-offset="0" max-vertical-offset="3995">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding>
             <element signature="e#6#100#0#PHP" expanded="true" />
             <marker date="1428294093103" expanded="true" signature="1435:1520" placeholder="..." />
             <marker date="1428294093103" expanded="true" signature="4955:5022" placeholder="..." />
             <marker date="1428294093103" expanded="true" signature="5147:5206" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.615385" vertical-offset="63" max-vertical-offset="1054">
+          <caret line="49" column="72" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1649">
+          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/menus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5146317" vertical-offset="0" max-vertical-offset="991">
+          <caret line="35" column="103" selection-start-line="35" selection-start-column="103" selection-end-line="35" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -32,7 +32,8 @@ function build_header_menu(){
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;
-            $menu_list .= '<li><a href="" ui-sref="page({pageId:'.$menu_item->object_id.'})">' . $title . '</a></li>';
+            $pageId = $menu_item->object_id;
+            $menu_list .= '<li ng-class="{active:$state.includes(\'page\', {pageId: \''.$pageId.'\'})}"><a href="" ui-sref="page({pageId:'.$pageId.'})">' . $title . '</a></li>';
         }
     }
     // $menu_list now ready to output
