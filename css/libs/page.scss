@@ -1,0 +1,10 @@
+#page{
+  min-height: 400px;
+  .page-header{}
+  #faq{
+    .faq{border:none;
+      .question{font-weight: bold;font-size: 16px;}
+      .answer{font-size: 15px;}
+    }
+  }
+}

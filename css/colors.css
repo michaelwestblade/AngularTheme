@@ -1,9 +1,16 @@
 <style type="text/css">
 /* Main Colors */
 .HeadersBGColor{
-    background-color: #16dddd!important;}
-.HeadersBGColor ul li a{
+    background-color: #000000!important;}
+.HeadersBGColor ul li a,.HeadersBGColor span{
     color: #ffffff!important;}
+.HeadersBGColor ul li:hover, .HeadersBGColor ul li.active{
+    background-color: #b5b5b5!important;}
 .MainBGColor{
     background-color: #ffffff!important;}
+
+.AccentColor1_color{
+    color: #ff4e00!important;}
+.AccentColor1_bg{
+    background-color: #ff4e00!important;   color: #ffffff!important;}
 </style>

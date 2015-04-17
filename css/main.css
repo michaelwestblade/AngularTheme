@@ -2,27 +2,31 @@
 ul.list-group {
   margin-bottom: 0; }
 
-#header .navbar-brand {
-  height: auto;
-  padding: 5px; }
-  #header .navbar-brand img {
-    width: 100px; }
-  #header .navbar-brand h1 {
-    margin: 0 20px;
-    height: 100px;
-    line-height: 100px;
-    white-space: nowrap; }
-    @media (max-width: 767px) {
-      #header .navbar-brand h1 {
-        font-size: 16px;
-        max-width: 100px; } }
-@media (max-width: 767px) {
-  #header .navbar-toggle {
-    font-size: 16px;
-    height: 110px;
-    margin: 0; } }
-#header .navbar-collapse .nav li {
-  padding: 25px 0; }
+#header {
+  margin: 0; }
+  #header .navbar-brand {
+    height: auto;
+    padding: 5px; }
+    #header .navbar-brand img {
+      width: 100px; }
+    #header .navbar-brand h1 {
+      margin: 0 20px;
+      height: 100px;
+      line-height: 100px;
+      white-space: nowrap; }
+      @media (max-width: 767px) {
+        #header .navbar-brand h1 {
+          font-size: 16px;
+          max-width: 100px; } }
+  @media (max-width: 767px) {
+    #header .navbar-toggle {
+      font-size: 16px;
+      height: 110px;
+      margin: 0; } }
+  #header .navbar-collapse .nav li {
+    padding: 25px 0; }
+    #header .navbar-collapse .nav li a {
+      background: none; }
 
 #instagramHeader div.row .imageDiv {
   padding: 0; }
@@ -39,7 +43,7 @@ body {
     min-height: 400px; }
     body #siteContainer #main {
       min-height: 400px;
-      padding: 20px; }
+      padding: 20px 0; }
       body #siteContainer #main #postList .page-header h1 span {
         font-weight: 400; }
       body #siteContainer #main #postList .page-header form {
@@ -56,8 +60,17 @@ body {
           margin-bottom: 50px;
           padding-bottom: 10px;
           border-bottom: 1px solid #000; }
+        body #siteContainer #main #postList ul.posts li div.media h4 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 20px; }
+        body #siteContainer #main #postList ul.posts li div.media .excerpt {
+          font-size: 15px; }
         body #siteContainer #main #postList ul.posts li div.media a.media-left img {
-          width: 100px; }
+          width: 100%;
+          max-width: 200px; }
+        body #siteContainer #main #postList ul.posts li div.media .readMore {
+          margin-top: 10px; }
       body #siteContainer #main #post .mainImage img {
         display: block;
         margin: 0 auto;
@@ -71,6 +84,15 @@ body {
       body #siteContainer #main #post .share {
         border-top: 1px solid #eee;
         margin-top: 40px; }
+      body #siteContainer #main #page {
+        min-height: 400px; }
+        body #siteContainer #main #page #faq .faq {
+          border: none; }
+          body #siteContainer #main #page #faq .faq .question {
+            font-weight: bold;
+            font-size: 16px; }
+          body #siteContainer #main #page #faq .faq .answer {
+            font-size: 15px; }
 
 .loader.spinner {
   width: 40px;

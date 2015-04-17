@@ -1,4 +1,4 @@
-#header{
+#header{margin: 0;
   .navbar-brand{height: auto;padding: 5px;
     img{width: 100px;}
     h1{margin: 0 20px;height: 100px;  line-height: 100px;white-space: nowrap;
@@ -17,7 +17,9 @@
   }
   .navbar-collapse{
     .nav{
-      li{padding: 25px 0;}
+      li{padding: 25px 0;
+        a{background: none;}
+      }
     }
   }
 }

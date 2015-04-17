@@ -12,24 +12,20 @@
                     </div>
                 </form>
             </div>
-           <div class="col-sm-4">
-               <ul class="nav nav-pills pull-right">
-                   <li role="presentation">
-                       <div dropdown>
-                           <button type="button" class="btn btn-primary dropdown-toggle">
-                               Categories <i class="fa fa-angle-down"></i>
-                           </button>
-                           <ul class="dropdown-menu categories" role="menu">
-                               <li ng-class="{active:!activeCategory}">
-                                   <a href="" ng-click="setCategory(null)">Recent Posts</a>
-                               </li>
-                               <li ng-class="{active:activeCategory.cat_ID == category.cat_ID}" ng-repeat="category in postCategories">
-                                   <a href="" ng-click="setCategory(category)">{{category.cat_name}}</a>
-                               </li>
-                           </ul>
-                       </div>
-                   </li>
-               </ul>
+           <div class="col-sm-4 hidden-xs">
+               <div dropdown class="pull-right">
+                   <button type="button" class="btn AccentColor1_bg dropdown-toggle">
+                       Categories <i class="fa fa-angle-down"></i>
+                   </button>
+                   <ul class="dropdown-menu categories" role="menu">
+                       <li ng-class="{active:!activeCategory}">
+                           <a href="" ng-click="setCategory(null)">Recent Posts</a>
+                       </li>
+                       <li ng-class="{active:activeCategory.cat_ID == category.cat_ID}" ng-repeat="category in postCategories">
+                           <a href="" ng-click="setCategory(category)">{{category.cat_name}}</a>
+                       </li>
+                   </ul>
+               </div>
            </div>
         </div>
     </div>
@@ -37,29 +33,29 @@
         <div class="col-sm-12">
             <ul class="list-group posts">
                 <li class="list-group-item" ng-repeat="post in posts" ng-class="{last:$index==posts.length-1}">
-                    <div class="media" ng-if="$index!==posts.length-1">
-                        <a class="media-left pull-left" href="#">
+                    <div class="media col-sm-12" ng-if="$index!==posts.length-1">
+                        <a class="media-left col-sm-3" href="#">
                             <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/> </a>
 
-                        <div class="media-body">
+                        <div class="media-body col-sm-9">
                             <h4 class="media-heading">
-                                <a href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
+                                <a class="AccentColor1_color" href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
                             </h4>
-                            <span ng-bind-html="post.excerpt | unsafe"></span>
-                            <a href="" ng-if="post.excerpt" ui-sref="post({postId:post.ID})">Read More.</a>
+                            <span class="excerpt" ng-bind-html="post.excerpt | unsafe"></span>
+                            <a class="readMore AccentColor1_color" href="" ng-if="post.excerpt" ui-sref="post({postId:post.ID})">Read More.</a>
                         </div>
                     </div>
 
-                    <div class="media" ng-if="$index==posts.length-1" in-view="getPosts(currentPage+1)">
-                        <a class="media-left pull-left" href="#">
+                    <div class="media col-sm-12" ng-if="$index==posts.length-1" in-view="getPosts(currentPage+1)">
+                        <a class="media-left col-sm-3" href="#">
                             <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/> </a>
                         </a>
-                        <div class="media-body">
+                        <div class="media-body col-sm-9">
                             <h4 class="media-heading">
-                                <a href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
+                                <a class="AccentColor1_color" href="" ui-sref="post({postId:post.ID})">{{post.title}}</a>
                             </h4>
-                            <span ng-bind-html="post.excerpt | unsafe"></span>
-                            <a href="" ng-if="post.excerpt" ui-sref="post({postId:post.ID})">Read More.</a>
+                            <span class="excerpt" ng-bind-html="post.excerpt | unsafe"></span>
+                            <a class="readMore AccentColor1_color" href="" ng-if="post.excerpt" ui-sref="post({postId:post.ID})">Read More.</a>
                         </div>
                     </div>
                 </li>

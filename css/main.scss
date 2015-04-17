@@ -8,8 +8,9 @@ ul.list-group{margin-bottom: 0;}
 
 body{padding-bottom:60px;background: #000;
   #siteContainer {  max-width: 1200px;margin: 0 auto;background: #FFF;min-height: 400px;
-    #main {  min-height: 400px;  padding: 20px;
+    #main {  min-height: 400px;  padding: 20px 0;
       @import "libs/posts";
+      @import "libs/page";
     }
   }
 }

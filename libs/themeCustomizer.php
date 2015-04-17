@@ -100,7 +100,7 @@ function color_selections( $wp_customize ){
     );
 
     $wp_customize->add_setting(
-        'headers_nav_color',
+        'headers_text_color',
         array(
             'default' => '#000000',
             'sanitize_callback' => 'sanitize_hex_color',
@@ -110,11 +110,71 @@ function color_selections( $wp_customize ){
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'headers_nav_color',
+            'headers_text_color',
             array(
-                'label' => 'Headers Navigation Color',
+                'label' => 'Headers Text Color',
                 'section' => 'color_options',
-                'settings' => 'headers_nav_color',
+                'settings' => 'headers_text_color',
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'headers_text_highlight',
+        array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'headers_text_color',
+            array(
+                'label' => 'Headers Text Color highlight',
+                'section' => 'color_options',
+                'settings' => 'headers_text_highlight',
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'accent_color_1',
+        array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'accent_color_1',
+            array(
+                'label' => 'Accent Color Color 1',
+                'section' => 'color_options',
+                'settings' => 'accent_color_1',
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'accent_color_2',
+        array(
+            'default' => '#000000',
+            'sanitize_callback' => 'sanitize_hex_color',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'accent_color_2',
+            array(
+                'label' => 'Accent Color Color 2',
+                'section' => 'color_options',
+                'settings' => 'accent_color_2',
             )
         )
     );

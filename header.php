@@ -39,16 +39,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="" <?php echo ($home !== "0" ? 'ui-sref="home()"' : 'ui-sref="posts()"') ?>>
+                        <a class="navbar-brand HeadersTextColor" href="" <?php echo ($home !== "0" ? 'ui-sref="home()"' : 'ui-sref="posts()"') ?>>
                             <img class="pull-left" src="<?php echo get_theme_mod('logo_img'); ?>">
 
-                            <h1 class="pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
+                            <h1 class="HeadersTextColor pull-right text-left"><?php echo get_bloginfo('name'); ?></h1>
                         </a>
                     </div>
                     <div id="navbar" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
                         <ul class="nav navbar-nav">
                             <li ng-class="{active:$state.includes('posts')||$state.includes('post')}">
-                                <a href="" ui-sref="posts()">Posts</a>
+                                <a class="HeadersTextColor" href="" ui-sref="posts()">Posts</a>
                             </li>
                             <?php build_header_menu(); ?>
                         </ul>

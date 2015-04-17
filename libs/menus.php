@@ -33,7 +33,7 @@ function build_header_menu(){
             $title = $menu_item->title;
             $url = $menu_item->url;
             $pageId = $menu_item->object_id;
-            $menu_list .= '<li ng-class="{active:$state.includes(\'page\', {pageId: \''.$pageId.'\'})}"><a href="" ui-sref="page({pageId:'.$pageId.'})">' . $title . '</a></li>';
+            $menu_list .= '<li ng-class="{active:$state.includes(\'page\', {pageId: \''.$pageId.'\'})}"><a class="HeadersTextColor" href="" ui-sref="page({pageId:'.$pageId.'})">' . $title . '</a></li>';
         }
     }
     // $menu_list now ready to output

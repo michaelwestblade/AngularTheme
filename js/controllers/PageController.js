@@ -20,6 +20,15 @@ myapp.controller('PageController', ['$scope','page','PostsService','$state',func
                         console.log(errors);
                         $scope.contentLoaded = true;
                     });
+            }else if($scope.template=='projects'){
+                PostsService.projects()
+                    .then(function(result){
+                        $scope.projects = result.data;
+                        $scope.contentLoaded = true;
+                    },function(errors){
+                        console.log(errors);
+                        $scope.contentLoaded = true;
+                    });
             }else{
                 $scope.contentLoaded = true;
             }
