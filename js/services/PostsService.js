@@ -55,6 +55,15 @@ myapp.factory('PostsService', ['ajax','$q','$rootScope',function(ajax,$q,$rootSc
         getPostMeta : function(postId){
             var deferred = $q.defer();
 
+            ajax.call($rootScope.adminAjax+'?action=getPostMeta&post_id='+postId,null,'GET',function(data){
+                deferred.resolve(data.data);
+            });
+
+            return deferred.promise;
+        },
+        getPostMetaWithAuth : function(postId){
+            var deferred = $q.defer();
+
             ajax.call($rootScope.api+'posts/'+postId+'/meta',null,'GET',function(data){
                 var meta = {};
                 angular.forEach(data.data,function(metaObj,key){

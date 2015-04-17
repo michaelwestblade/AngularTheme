@@ -136,14 +136,3 @@ function angularTheme_load_directives(){
 
 add_theme_support( 'post-thumbnails' );
 
-function getPostMeta(){
-    $post_id = $_REQUEST['post_id'];
-    $meta_value = get_post_meta( $post_id);
-
-    echo json_encode($meta_value);
-    wp_die();
-}
-
-add_action( 'wp_ajax_nopriv_getPostMeta', 'getPostMeta' );
-add_action( 'wp_ajax_getPostMeta', 'getPostMeta' );
-
