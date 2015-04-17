@@ -9,6 +9,9 @@
 .HeadersBGColor ul li:hover, .HeadersBGColor ul li.active{
     background-color: <?php echo ( get_theme_mod( 'headers_text_highlight' ) != '' ? get_theme_mod( 'headers_text_highlight' ).'!important' : ''  ).";";  ?>
 }
+.HeadersTextColor{
+    color: <?php echo ( get_theme_mod( 'headers_text_color' ) != '' ? get_theme_mod( 'headers_text_color' ).'!important' : ''  ).";";  ?>
+}
 .MainBGColor{
     background-color: <?php echo ( get_theme_mod( 'main_bg_color' ) != '' ? get_theme_mod( 'main_bg_color' ).'!important' : ''  ).";";  ?>
 }

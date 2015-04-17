@@ -6,6 +6,8 @@
     color: #ffffff!important;}
 .HeadersBGColor ul li:hover, .HeadersBGColor ul li.active{
     background-color: #b5b5b5!important;}
+.HeadersTextColor{
+    color: #ffffff!important;}
 .MainBGColor{
     background-color: #ffffff!important;}
 

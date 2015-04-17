@@ -130,7 +130,7 @@ function color_selections( $wp_customize ){
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'headers_text_color',
+            'headers_text_highlight',
             array(
                 'label' => 'Headers Text Color highlight',
                 'section' => 'color_options',
