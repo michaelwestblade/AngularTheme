@@ -71,19 +71,21 @@ body {
           max-width: 200px; }
         body #siteContainer #main #postList ul.posts li div.media .readMore {
           margin-top: 10px; }
-      body #siteContainer #main #post .mainImage img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%; }
-      body #siteContainer #main #post .page-header a {
-        margin-right: 20px; }
-      body #siteContainer #main #post .well p {
-        font-size: 1.6rem;
-        color: #000;
-        padding: 20px; }
-      body #siteContainer #main #post .share {
-        border-top: 1px solid #eee;
-        margin-top: 40px; }
+      body #siteContainer #main #post {
+        padding: 40px 10px; }
+        body #siteContainer #main #post .mainImage img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%; }
+        body #siteContainer #main #post .page-header a {
+          margin-right: 20px; }
+        body #siteContainer #main #post .well p {
+          font-size: 1.6rem;
+          color: #000;
+          padding: 20px; }
+        body #siteContainer #main #post .share {
+          border-top: 1px solid #eee;
+          margin-top: 40px; }
       body #siteContainer #main #page {
         min-height: 400px; }
         body #siteContainer #main #page #faq .faq {
