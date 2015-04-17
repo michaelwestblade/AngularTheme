@@ -41,7 +41,8 @@ myapp.run(['$rootScope', '$state', '$stateParams','InstagramService',function($r
 config(['$stateProvider','$urlRouterProvider','$locationProvider','$analyticsProvider',function($stateProvider,$urlRouterProvider,$locationProvider,$analyticsProvider){
     $urlRouterProvider
         .when('','/posts')
-        .otherwise('/');
+        .when('/','/posts')
+        .otherwise('/posts');
         if(BlogInfo.DEV){
             $locationProvider.hashPrefix('!');
         }else{

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ead74ae0-6a7e-4027-9180-07ddccaec866" name="Default" comment="style updates">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/colors.css" afterPath="$PROJECT_DIR$/css/colors.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.php" afterPath="$PROJECT_DIR$/css/styles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/themeCustomizer.php" afterPath="$PROJECT_DIR$/libs/themeCustomizer.php" />
+    <list default="true" id="ead74ae0-6a7e-4027-9180-07ddccaec866" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AngularTheme.iws" />
@@ -50,21 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1649">
-              <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.36811024" vertical-offset="357" max-vertical-offset="1666">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.034343433" vertical-offset="0" max-vertical-offset="990">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="527">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -148,7 +146,6 @@
         <option value="$PROJECT_DIR$/partials/faq.html" />
         <option value="$PROJECT_DIR$/partials/about.html" />
         <option value="$PROJECT_DIR$/libs/postOptions.php" />
-        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/partials/page/about.html" />
         <option value="$PROJECT_DIR$/partials/page/default.html" />
         <option value="$PROJECT_DIR$/libs/PostOption.php" />
@@ -172,6 +169,7 @@
         <option value="$PROJECT_DIR$/partials/page/faq.html" />
         <option value="$PROJECT_DIR$/libs/themeCustomizer.php" />
         <option value="$PROJECT_DIR$/css/styles.php" />
+        <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
   </component>
@@ -497,12 +495,6 @@
       <option name="number" value="Default" />
       <updated>1411844750503</updated>
     </task>
-    <task id="LOCAL-00023" summary="dynamic css now functional as well as comment validation">
-      <created>1421643494764</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1421643494764</updated>
-    </task>
     <task id="LOCAL-00024" summary="dynamic css now functional as well as comment validation">
       <created>1421643542554</created>
       <option name="number" value="00024" />
@@ -791,7 +783,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429245410067</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="style updates">
+      <created>1429246055143</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1429246055143</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1246,14 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1649">
-          <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/themeCustomizer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.0" vertical-offset="1499" max-vertical-offset="4165">
@@ -1264,8 +1254,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034343433" vertical-offset="0" max-vertical-offset="990">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="527">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36811024" vertical-offset="357" max-vertical-offset="1666">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding />
         </state>
       </provider>
