@@ -110,6 +110,9 @@ body {
             font-size: 15px; }
         body #siteContainer #main #page #projects #projectsMain div.media .media-left img {
           max-width: 250px; }
+          @media (max-width: 767px) {
+            body #siteContainer #main #page #projects #projectsMain div.media .media-left img {
+              width: 75px; } }
         body #siteContainer #main #page #projects #projectsMain div.media .media-body h4 {
           font-size: 20px;
           font-weight: bold;
