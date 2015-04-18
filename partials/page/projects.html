@@ -1,3 +1,21 @@
-<div id="projects">
+<div id="projectsMain">
+    <div class="row">
+        <div class="col-sm-12" ng-bind-html="page.content | unsafe"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="media well" ng-repeat="project in projects">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" ng-src="{{ (project.featured_image ? project.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" ng-bind-html="project.title | unsafe"></h4>
+                    <div ng-bind-html="project.content | unsafe"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <span ng-if="!projects.length">No Projects</span>
 </div>

@@ -59,18 +59,27 @@ body {
         body #siteContainer #main #postList ul.posts li.last {
           margin-bottom: 50px;
           padding-bottom: 10px;
-          border-bottom: 1px solid #000; }
-        body #siteContainer #main #postList ul.posts li div.media h4 {
-          font-size: 24px;
-          font-weight: bold;
-          margin-bottom: 20px; }
-        body #siteContainer #main #postList ul.posts li div.media .excerpt {
-          font-size: 15px; }
-        body #siteContainer #main #postList ul.posts li div.media a.media-left img {
-          width: 100%;
-          max-width: 200px; }
-        body #siteContainer #main #postList ul.posts li div.media .readMore {
-          margin-top: 10px; }
+          border-bottom: 1px solid; }
+          body #siteContainer #main #postList ul.posts li.last div.media {
+            border: none; }
+        body #siteContainer #main #postList ul.posts li div.media {
+          border-bottom: 1px solid;
+          padding-bottom: 20px; }
+          body #siteContainer #main #postList ul.posts li div.media a.media-left img {
+            width: 200px; }
+            @media (max-width: 767px) {
+              body #siteContainer #main #postList ul.posts li div.media a.media-left img {
+                width: 75px; } }
+          body #siteContainer #main #postList ul.posts li div.media .media-body {
+            padding-left: 5%; }
+            body #siteContainer #main #postList ul.posts li div.media .media-body h4 {
+              font-size: 24px;
+              font-weight: bold;
+              margin-bottom: 20px; }
+            body #siteContainer #main #postList ul.posts li div.media .media-body .excerpt {
+              font-size: 15px; }
+            body #siteContainer #main #postList ul.posts li div.media .media-body .readMore {
+              margin-top: 10px; }
       body #siteContainer #main #post {
         padding: 40px 10px; }
         body #siteContainer #main #post .mainImage img {
@@ -88,13 +97,34 @@ body {
           margin-top: 40px; }
       body #siteContainer #main #page {
         min-height: 400px; }
-        body #siteContainer #main #page #faq .faq {
+        body #siteContainer #main #page p {
+          font-size: 16px; }
+        body #siteContainer #main #page .page-header {
+          margin-bottom: 30px; }
+        body #siteContainer #main #page #faq #faqMain .faq {
           border: none; }
-          body #siteContainer #main #page #faq .faq .question {
+          body #siteContainer #main #page #faq #faqMain .faq .question {
             font-weight: bold;
             font-size: 16px; }
-          body #siteContainer #main #page #faq .faq .answer {
+          body #siteContainer #main #page #faq #faqMain .faq .answer {
             font-size: 15px; }
+        body #siteContainer #main #page #projects #projectsMain div.media .media-left img {
+          max-width: 250px; }
+        body #siteContainer #main #page #projects #projectsMain div.media .media-body h4 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 20px; }
+        body #siteContainer #main #page #about .well p:first-child::first-letter {
+          font-weight: bold;
+          font-size: 44px; }
+        body #siteContainer #main #page #about .well p::first-letter {
+          margin-left: 5%; }
+        body #siteContainer #main #page #about .well p {
+          color: #000;
+          font-size: 18px;
+          padding: 10px 20px; }
+        body #siteContainer #main #page #about .well img {
+          width: 100%; }
 
 .loader.spinner {
   width: 40px;

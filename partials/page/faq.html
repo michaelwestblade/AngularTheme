@@ -1,4 +1,7 @@
-<div id="faq">
+<div id="faqMain">
+    <div class="row">
+        <div class="col-sm-12" ng-bind-html="page.content | unsafe"></div>
+    </div>
     <div class="row">
         <div class="col-sm-6">
             <div class="faq panel panel-default" ng-if="$index<faqs.length/2" ng-repeat="faq in faqs">

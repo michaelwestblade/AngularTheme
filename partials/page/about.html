@@ -1,0 +1,8 @@
+<div class="well">
+    <div class="row">
+        <div class="col-sm-4">
+            <img ng-src="{{ (page.featured_image ? page.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/>
+        </div>
+        <div class="col-sm-8" ng-bind-html="page.content | unsafe"></div>
+    </div>
+</div>

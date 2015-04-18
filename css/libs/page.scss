@@ -1,10 +1,40 @@
 #page{
   min-height: 400px;
-  .page-header{}
+  p{font-size: 16px;}
+  .page-header{margin-bottom: 30px;}
   #faq{
-    .faq{border:none;
-      .question{font-weight: bold;font-size: 16px;}
-      .answer{font-size: 15px;}
+    #faqMain{
+      .faq{border:none;
+        .question{font-weight: bold;font-size: 16px;}
+        .answer{font-size: 15px;}
+      }
     }
+  }
+  #projects{
+    #projectsMain{
+      div.media{
+        .media-left{
+          img{max-width:250px; }
+        }
+        .media-body{
+          h4{font-size: 20px;font-weight: bold;margin-bottom: 20px;}
+        }
+      }
+    }
+  }
+  #about{
+   .well{
+     p:first-child{
+       &::first-letter{
+         font-weight: bold;
+         font-size: 44px;
+       }
+     }
+     p::first-letter {
+       margin-left: 5%;
+     }
+     p{color: #000;font-size: 18px;padding: 10px 20px;}
+     img{width: 100%;}
+   }
   }
 }

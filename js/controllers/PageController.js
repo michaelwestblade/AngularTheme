@@ -9,7 +9,7 @@ myapp.controller('PageController', ['$scope','page','PostsService','$state',func
     PostsService.getPostMeta(page.ID)
         .then(function(data){
             $scope.pageMeta = data;
-            $scope.template = (data['page_template'] ? data['page_template'] : 'page');
+            $scope.template = (data['page_template'] ? data['page_template'][0] : 'page');
 
             if($scope.template=='faq'){
                 PostsService.faqs()

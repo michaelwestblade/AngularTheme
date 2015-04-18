@@ -51,6 +51,7 @@ function page_template_meta_box_callback( $post ) {
             <option value="none" <?php if ( isset ( $meta['page_template'] ) ) selected( $meta['page_template'][0], 'none' ); ?>><?php _e( 'None', 'page-template-textdomain' )?></option>';
             <option value="faq" <?php if ( isset ( $meta['page_template'] ) ) selected( $meta['page_template'][0], 'faq' ); ?>><?php _e( 'FAQ', 'page-template-textdomain' )?></option>';
             <option value="projects" <?php if ( isset ( $meta['page_template'] ) ) selected( $meta['page_template'][0], 'projects' ); ?>><?php _e( 'Projects', 'page-template-textdomain' )?></option>';
+            <option value="about" <?php if ( isset ( $meta['page_template'] ) ) selected( $meta['page_template'][0], 'about' ); ?>><?php _e( 'About', 'page-template-textdomain' )?></option>';
         </select>
     </p>
 
