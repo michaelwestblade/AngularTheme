@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <div class="faq panel panel-default" ng-if="$index>faqs.length/2" ng-repeat="faq in faqs">
+            <div class="faq panel panel-default" ng-if="$index>=faqs.length/2" ng-repeat="faq in faqs">
                 <div class="question panel-heading AccentColor1_bg" ng-bind-html="faq.title"></div>
                 <div class="answer panel-body well" ng-bind-html="faq.content"></div>
             </div>
