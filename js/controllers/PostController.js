@@ -7,7 +7,7 @@ myapp.controller('PostController', ['$scope','post','PostsService','$state',func
     $scope.disqus_shortcode = ( BlogInfo['disqus_shortcode'] != "" ? BlogInfo['disqus_shortcode'] : null );
     $scope.post = post;
     $scope.postId = "post_"+post.ID;
-    $scope.postUrl = window.location.href;
+    $scope.postUrl = $state.href("post",{postId:post.ID},{ absolute: true });
 
     PostsService.getPostMeta(post.ID)
         .then(function(data){
