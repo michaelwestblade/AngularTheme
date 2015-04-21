@@ -19,5 +19,7 @@
 #page #about p:first-child::first-letter{color: #ff4e00!important;}
 #page .page-header{border-color: #b5b5b5!important;}
 
+#postList ul.dropdown-menu li.active a{background-color: #ff4e00!important;}
+#postList ul.dropdown-menu li a:hover{color: #ff4e00!important;}
 #postList ul.posts li .media{border-color: #b5b5b5!important;}
 </style>

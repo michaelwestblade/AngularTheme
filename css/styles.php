@@ -27,5 +27,7 @@
 #page #about p:first-child::first-letter{color: <?php echo ( get_theme_mod( 'accent_color_1' ) != '' ? get_theme_mod( 'accent_color_1' ).'!important' : ''  ).";";  ?>}
 #page .page-header{border-color: <?php echo ( get_theme_mod( 'headers_text_highlight' ) != '' ? get_theme_mod( 'headers_text_highlight' ).'!important' : ''  ).";";  ?>}
 
+#postList ul.dropdown-menu li.active a{background-color: <?php echo ( get_theme_mod( 'accent_color_1' ) != '' ? get_theme_mod( 'accent_color_1' ).'!important' : ''  ).";";  ?>}
+#postList ul.dropdown-menu li a:hover{color: <?php echo ( get_theme_mod( 'accent_color_1' ) != '' ? get_theme_mod( 'accent_color_1' ).'!important' : ''  ).";";  ?>}
 #postList ul.posts li .media{border-color: <?php echo ( get_theme_mod( 'headers_text_highlight' ) != '' ? get_theme_mod( 'headers_text_highlight' ).'!important' : ''  ).";";  ?>}
 </style>

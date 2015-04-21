@@ -54,6 +54,8 @@ body {
             width: 100%; }
       body #siteContainer #main #postList .page-header button {
         margin-top: 30px; }
+      body #siteContainer #main #postList .page-header ul.dropdown-menu {
+        right: auto; }
       body #siteContainer #main #postList ul.posts li {
         margin: 20px 0; }
         body #siteContainer #main #postList ul.posts li.last {
@@ -95,6 +97,8 @@ body {
         body #siteContainer #main #post .share {
           border-top: 1px solid #eee;
           margin-top: 40px; }
+        body #siteContainer #main #post #comments {
+          margin: 20px 0; }
       body #siteContainer #main #page {
         min-height: 400px; }
         body #siteContainer #main #page p {
@@ -128,6 +132,17 @@ body {
           padding: 10px 20px; }
         body #siteContainer #main #page #about .well img {
           width: 100%; }
+      body #siteContainer #main .share .facebook {
+        background-color: #3a5795;
+        color: #FFF; }
+      body #siteContainer #main .share .twitter {
+        background-color: #55acee;
+        color: #FFF; }
+      body #siteContainer #main .share .google {
+        background-color: #d73d32;
+        color: #FFF; }
+      body #siteContainer #main .share .reddit {
+        background-color: #cee3f8; }
 
 .loader.spinner {
   width: 40px;

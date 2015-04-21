@@ -11,6 +11,13 @@ body{padding-bottom:60px;background: #000;
     #main {  min-height: 400px;  padding: 20px 0;
       @import "libs/posts";
       @import "libs/page";
+
+      .share{
+        .facebook{background-color:#3a5795; color:#FFF;}
+        .twitter{background-color:#55acee; color: #FFF;}
+        .google{background-color:#d73d32; color: #FFF}
+        .reddit{background-color:#cee3f8; }
+      }
     }
   }
 }
