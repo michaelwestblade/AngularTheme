@@ -45,11 +45,20 @@
     a{margin-right: 20px;}
   }
   .well{
-    p{font-size: 1.6rem;color:#000;padding: 20px;}
+    p{font-size: 1.6rem;color:#000;padding:10px 20px;}
   }
   .share{
     border-top: 1px solid #eee;
     margin-top: 40px;
+  }
+  .pull-qoute{
+    text-align: center;font-style: italic;font-size: 20px;margin: 10px;
+    &::before{content: open-quote;}
+    &::after{content: close-quote;}
+  }
+  .code{
+    background: #000;color: #FFF;padding: 10px;margin: 0 15px;
+    .spacer{}
   }
   #comments{margin: 20px 0;}
 }
