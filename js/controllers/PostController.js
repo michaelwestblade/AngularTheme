@@ -13,6 +13,10 @@ myapp.controller('PostController', ['$scope','post','PostsService','$state',func
         .then(function(data){
             $scope.postMeta = data;
             $scope.layout = (data['featured_image_position'] ? data['featured_image_position'] : 'center');
+
+            if(data['hide_featured_image'] && data['hide_featured_image'] == '1'){
+                $scope.layout = 'noImage';
+            }
             $scope.contentLoaded = true;
         },function(errors){
             console.log(errors);
