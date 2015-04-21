@@ -35,7 +35,7 @@
                 <li class="list-group-item" ng-repeat="post in posts" ng-class="{last:$index==posts.length-1}">
                     <div class="media col-sm-12" ng-if="$index!==posts.length-1">
                         <a class="media-left" href="#">
-                            <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/> </a>
+                            <img ng-src="{{ (post.featured_image ? post.featured_image.source : dir+'/img/default.jpg') }}" alt=""/> </a>
 
                         <div class="media-body">
                             <h4 class="media-heading">
@@ -48,7 +48,7 @@
 
                     <div class="media col-sm-12" ng-if="$index==posts.length-1" in-view="getPosts(currentPage+1)">
                         <a class="media-left" href="#">
-                            <img ng-src="{{ (post.featured_image ? post.featured_image.guid : dir+'/img/default.jpg') }}" alt=""/> </a>
+                            <img ng-src="{{ (post.featured_image ? post.featured_image.source : dir+'/img/default.jpg') }}" alt=""/> </a>
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">
