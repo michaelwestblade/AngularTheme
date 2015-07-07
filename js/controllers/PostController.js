@@ -16,10 +16,10 @@ myapp.controller('PostController', ['$scope','post','PostsService','$state',func
 
             if(data['hide_featured_image'] && data['hide_featured_image'] == '1'){
                 $scope.layout = 'noImage';
-            }
-            $scope.contentLoaded = true;
-        },function(errors){
-            console.log(errors);
-            $scope.contentLoaded = true;
-    });
+}
+$scope.contentLoaded = true;
+},function(errors){
+    console.log(errors);
+    $scope.contentLoaded = true;
+});
 }]);
