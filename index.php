@@ -12,4 +12,6 @@
     </div>
 </div>
 
+<!-- comment -->
+
 <?php get_footer(); ?>
